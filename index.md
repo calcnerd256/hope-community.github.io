@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: index
 ---
 
 No idea what's going on here.
