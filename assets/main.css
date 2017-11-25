@@ -8,7 +8,8 @@
  .bg-1{
     width: 100%;
     height: 550px;
-    background: url("http://eskipaper.com/images/free-ocean-pictures-1.jpg") no-repeat center center;
+/*     background: url("http://eskipaper.com/images/free-ocean-pictures-1.jpg") no-repeat center center; */
+    background: #296cd8;
     background-size: cover;
   }
 
