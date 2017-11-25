@@ -1,5 +1,5 @@
 ---
 layout: visit
-title: Visit
+title: VISIT
 permalink: /visit/
 ---
