@@ -13,7 +13,12 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav navbar-right">
-		{% if page_paths %}
+	      	<li><a href="{{ "/visit" | relative_url}}">VISIT</a></li>
+	      	<li><a href="{{ "/about" | relative_url}}">ABOUT</a></li>
+	        <li><a href="{{ "/connect" | relative_url}}">CONNECT</a></li>
+	        <li><a href="{{ "/gp" | relative_url}}">GOSPEL PROJECT</a></li>
+	        <li><a href="#">GIVE</a></li>
+<!--		{% if page_paths %}
                 {% for path in page_paths %}
                     {% assign my_page = site.pages | where: "path", path | first %}
                     {% if my_page.title %}
@@ -21,9 +26,9 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
-	        <li><a href="#">ABOUT</a></li>
+            <li><a href="#">ABOUT</a></li>
 	        <li><a href="#">CONNECT</a></li>
-	        <li><a href="#">GOSPEL PROJECT</a></li>
+	        <li><a href="#">GOSPEL PROJECT</a></li> -->
 	      </ul>
 	    </div>
 	</div>
