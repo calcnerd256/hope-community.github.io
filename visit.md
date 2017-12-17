@@ -1,5 +1,5 @@
 ---
 layout: visit
 title: VISIT
-permalink: /visit/
+permalink: /secretvisitpage/
 ---
