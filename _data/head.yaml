@@ -1,0 +1,9 @@
+---
+urls:
+  bootstrap:
+    css: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+    js: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
+  google:
+    jquery: https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
+    font_css: https://fonts.googleapis.com/css?family=Oswald
+---
