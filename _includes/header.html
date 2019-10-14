@@ -1,29 +1,6 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
-				<div class="navbar-header">{% comment %}
-						hamburger menu
-					{% endcomment %}
-					<button{% comment %}
-						{% endcomment %}{% comment %}
-{% endcomment %} type="button"{% comment %}
-{% endcomment %} class="navbar-toggle"{% comment %}
-{% endcomment %} data-toggle="collapse"{% comment %}
-{% endcomment %} data-target="#myNavbar"{% comment %}
-						{% endcomment %}{% comment %}
-					{% endcomment %}>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a{% comment %}
-						{% endcomment %}{% comment %}
-{% endcomment %} class="navbar-brand"{% comment %}
-{% endcomment %} href="{{ "/" | relative_url}}"{% comment %}
-						{% endcomment %}{% comment %}
-					{% endcomment %}>{% comment %}
-{% endcomment %}{{ site.data.index.church.name.full }}{% comment %}
-					{% endcomment %}</a>
-				</div>
+{% include navbar-header.html indentation="				" %}
 				<div{% comment %}
 					{% endcomment %}{% comment %}
 {% endcomment %} class="collapse navbar-collapse"{% comment %}
