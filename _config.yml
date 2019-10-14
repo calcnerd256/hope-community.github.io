@@ -7,4 +7,4 @@ github_username:  hopechurchnorman
 plugins:
   - jekyll-seo-tag
 sass:
-  style: compact
+  style: expanded
