@@ -33,7 +33,7 @@
     height: 450px;{% comment %}
     /*background: url("http://eskipaper.com/images/free-ocean-pictures-1.jpg") no-repeat center center;*/
     /*background: url("/assets/Screen Shot 2017-11-25 at 1.02.58 PM.png") no-repeat center center;*/{% endcomment %}
-    background: url("/assets/20171017_185307.jpg") no-repeat center center;{% comment %}
+    background: url("{{ "/assets/20171017_185307.jpg" | relative_url }}") no-repeat center center;{% comment %}
     /*background: #2359af;*/{% endcomment %}
     background-size: cover;
 }
@@ -42,7 +42,7 @@
     height: 450px;{% comment %}
     /*background: url("http://eskipaper.com/images/free-ocean-pictures-1.jpg") no-repeat center center;*/
     /*background: url("/assets/Screen Shot 2017-11-25 at 1.02.58 PM.png") no-repeat center center;*/{% endcomment %}
-    background: url("/assets/0640.JPG") no-repeat center center;{% comment %}
+    background: url("{{ "/assets/0640.JPG" | relative_url }}") no-repeat center center;{% comment %}
     /*background: #2359af;*/{% endcomment %}
     background-size: cover;
 }
@@ -51,7 +51,7 @@
     height: 450px;{% comment %}
     /*background: url("http://eskipaper.com/images/free-ocean-pictures-1.jpg") no-repeat center center;*/
     /*background: url("/assets/Screen Shot 2017-11-25 at 1.02.58 PM.png") no-repeat center center;*/{% endcomment %}
-    background: url("/assets/20171010_190350.jpg") no-repeat center center;{% comment %}
+    background: url("{{ "/assets/20171010_190350.jpg" | relative_url }}") no-repeat center center;{% comment %}
     /*background: #2359af;*/{% endcomment %}
     background-size: cover;
 }
