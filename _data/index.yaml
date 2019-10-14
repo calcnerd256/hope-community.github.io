@@ -1,0 +1,17 @@
+church:
+  name:
+    full: Hope Community Church
+    short: Hope Community
+    acronym: HCC
+meeting:
+  day: Sundays
+  time: 10:30 A.M.
+  address:
+    number: 1637
+    street: Stubbeman Ave
+    city: Norman
+    state:
+      abbreviation: OK
+pastor:
+  name: Matthew Beasley
+  e_mail: matthewhenrybeasley@gmail.com
