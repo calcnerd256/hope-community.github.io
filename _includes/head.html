@@ -1,12 +1,64 @@
+---
+urls:
+	bootstrap:
+		css: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+		js: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
+	google:
+		jquery: https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
+		font_css: https://fonts.googleapis.com/css?family=Oswald
+---
+{%- comment -%}{%- endcomment -%}{% comment %}
+	{% endcomment %}	{% comment %}{% endcomment %}
+{%- comment -%}{%- endcomment -%}
+
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type = "text/css"/>
-		<link rel="stylesheet" type="text/css" media="screen,projection" href="{{ "/assets/main.css" | relative_url }}">
-		<script type="text/javascript" src="javascripts/script.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<meta{% comment %}
+			{% endcomment %} name="viewport"{% comment %}
+			{% endcomment %} content="{% comment %}
+				{% endcomment %}width=device-width{% comment %}
+				{% endcomment %}, initial-scale=1{% comment %}
+				{% endcomment %}">
+		<link{% comment %}
+			{% endcomment %} rel="stylesheet"{% comment %}
+			{% endcomment %} href="{% comment %}
+				{% endcomment %}
+					{{- page.urls.bootstrap.css -}}
+					{% comment %}
+				{% endcomment %}"{% comment %}
+			{% endcomment %} type = "text/css"/>
+		<link{% comment %}
+			{% endcomment %} rel="stylesheet"{% comment %}
+			{% endcomment %} type="text/css"{% comment %}
+			{% endcomment %} media="screen,projection"{% comment %}
+			{% endcomment %} href="{% comment %}
+				{% endcomment %}
+{{- "/assets/main.css" | relative_url -}}
+					{% comment %}
+				{% endcomment %}">
+		<script{% comment %}
+			{% endcomment %} type="text/javascript"{% comment %}
+			{% endcomment %} src="javascripts/script.js"></script>
+		<script{% comment %}
+			{% endcomment %} src="{% comment %}
+				{% endcomment %}
+					{{- page.urls.google.jquery -}}
+					{% comment %}
+				{% endcomment %}"></script>
+		<script{% comment %}
+			{% endcomment %} type="text/javascript"{% comment %}
+			{% endcomment %} src="{% comment %}
+				{% endcomment %}
+					{{- page.urls.bootstrap.js -}}
+					{% comment %}
+				{% endcomment %}"></script>
+		<link{% comment %}
+			{% endcomment %} href="{% comment %}
+				{% endcomment %}
+					{{- page.urls.google.font_css -}}
+					{% comment %}
+				{% endcomment %}"{% comment %}
+			{% endcomment %} rel="stylesheet">
 
 {% seo %}
 	</head>
