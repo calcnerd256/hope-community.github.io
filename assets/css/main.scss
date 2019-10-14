@@ -24,7 +24,7 @@
     height: 450px;{% comment %}
     /*background: url("http://eskipaper.com/images/free-ocean-pictures-1.jpg") no-repeat center center;*/
     /*background: url("/assets/Screen Shot 2017-11-25 at 1.02.58 PM.png") no-repeat center center;*/{% endcomment %}
-    background: url("/assets/IMG958838.jpg") no-repeat center center;{% comment %}
+    background: url("{{ "/assets/IMG958838.jpg" | relative_url }}") no-repeat center center;{% comment %}
     /*background: #2359af;*/{% endcomment %}
     background-size: cover;
 }
