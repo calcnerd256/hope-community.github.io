@@ -7,12 +7,12 @@ layout: index
 					<div class='cover-text-bg'>
 						<p class='cover-text'></p>
 						<p class='cover-text-secondary'>
-							Join us {{ data.index.meeting.day }}
-								at {{ data.index.meeting.time }}
+							Join us {{ site.data.index.meeting.day }}
+								at {{ site.data.index.meeting.time }}
 						</p>
 						<p class='cover-text-thirdiary'>
-							{{ data.index.meeting.address.number }} {{ data.index.meeting.address.street }},
-								{{ data.index.meeting.address.city }}, {{ data.index.meeting.address.state.abbreviation }}
+							{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }},
+								{{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
 						</p>
 						<!--<a class="btn btn-secondary text-black" href="{{ "/visit" | relative_url}}">More Info</a>-->
 					</div>
@@ -24,7 +24,7 @@ layout: index
 					<div class='section-title'>Directions</div>
 					<div class='section-text-block'>
 						<p>
-							We currently meet at the Union Baptist Association office buidling at {{ data.index.meeting.address.number }} {{ data.index.meeting.address.street }}, {{ data.index.meeting.address.city }}.
+							We currently meet at the Union Baptist Association office buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
 							It's just to the south of Norman North High School and just north of E Robinson St.
 						</p>
 					</div>
@@ -36,8 +36,8 @@ layout: index
 					<div class='section-title'>Contact Us</div>
 					<div class='section-text-block'>
 						<p>
-							If you would like to know more about {{ data.index.church.name.full }}, or want to contact us for any other reason,
-								email {{ data.index.pastor.name }} at {{ data.index.pastor.e_mail }}.
+							If you would like to know more about {{ site.data.index.church.name.full }}, or want to contact us for any other reason,
+								email {{ site.data.index.pastor.name }} at {{ site.data.index.pastor.e_mail }}.
 						</p>
 					</div>
 
