@@ -16,11 +16,18 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav navbar-right">
+	        {%- comment -%}
+		{%- endcomment -%}
+		{% comment %}
 	      <!--	<li><a href="{{ "/visit" | relative_url}}">VISIT</a></li>-->
+		{% endcomment %}
 	        <li><a href="{{ "/about" | relative_url}}">ABOUT</a></li>
 	        <li><a href="{{ "/connect" | relative_url}}">CONNECT</a></li>
 	        <li><a href="{{ "/gp" | relative_url}}">GOSPEL PROJECT</a></li>
 	        <li><a href="https://goo.gl/gciC9i">GIVE</a></li>
+	        {%- comment -%}
+		{%- endcomment -%}
+		{% comment %}
 <!--		{%- if page_paths -%}
                 {% for path in page_paths %}
                     {%- assign my_page = site.pages | where: "path", path | first -%}
@@ -32,6 +39,7 @@
             <li><a href="#">ABOUT</a></li>
 	        <li><a href="#">CONNECT</a></li>
 	        <li><a href="#">GOSPEL PROJECT</a></li> -->
+		{% endcomment %}
 	      </ul>
 	    </div>
 	  </div>
