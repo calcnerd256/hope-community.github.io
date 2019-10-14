@@ -1,6 +1,21 @@
 ---
 layout: index
 ---
+
+{%- comment -%}
+	weird consequences of stripped whitespace
+{%- endcomment -%}
+
+	{% comment %}
+		we actually want to capture the following indentation:
+		{% endcomment %}		{% comment %}
+	{% endcomment %}
+
+{%- comment -%}
+	yet we also want to omit all the newlines around here
+	sorry that it's confusing
+{%- endcomment -%}
+
 		<div class="container-fluid" id="home">
 			<div class="row">
 				<div class="bg-1">
@@ -48,5 +63,5 @@ layout: index
 					</div>-->
 				</div>
 			</div>
-
 		</div>
+{%- comment -%}{%- endcomment -%}
