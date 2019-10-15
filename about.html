@@ -28,24 +28,13 @@ permalink: /about/
 				<div class='col-md-9 big-info-block'>
 					<div class='section-title'>Our Story</div>
 					<div class='section-text-block'>
-						{%- for paragraph in site.data.about.our_story -%}
-							{% comment %}
-							{% endcomment %}
-						<p>
-								{%- for sentence in paragraph -%}
-									{% comment %}
-									{% endcomment %}
-							{{ sentence }}
-								{%- endfor -%}
-								{% comment %}
-								{% endcomment %}
-						</p>{% unless forloop.last %}
-
-
-{% endunless %}
-						{%- endfor -%}
-						{% comment %}
-						{% endcomment %}
+						{%- comment -%}
+						{%- endcomment -%}
+						{% for paragraph in site.data.about.our_story %}
+						<p>{% for sentence in paragraph %}
+							{{ sentence }}{% endfor %}
+						</p>
+{% endfor %}
 					</div>
 
 					<div class='section-title'>Confession of Faith</div>
