@@ -39,10 +39,8 @@ permalink: /about/
 								{%- endfor -%}
 								{% comment %}
 								{% endcomment %}
-						</p>
-						{%- unless forloop.last -%}
-
-						{%- endunless -%}
+						</p>{% unless forloop.last %}
+{% endunless %}
 						{%- endfor -%}
 						{% comment %}
 						{% endcomment %}
