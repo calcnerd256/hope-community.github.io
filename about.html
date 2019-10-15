@@ -33,9 +33,14 @@ permalink: /about/
 						{% for paragraph in site.data.about.our_story %}
 						<p>{% for sentence in paragraph %}
 							{{ sentence }}{% endfor %}
-						</p>{% comment %}{% endcomment %}{% if forloop.last %}{% comment %}{% endcomment %}
-					{% comment %}{% endcomment %}{% else %}{% comment %}{% endcomment %}
-{% comment %}{% endcomment %}{% endif %}{% endfor %}</div>
+						</p>{% comment %}
+						{% endcomment %}A{% if forloop.last %}B{% comment %}
+						{% endcomment %}C
+					{% comment %}
+						{% endcomment %}D{% else %}E{% comment %}
+						{% endcomment %}F
+{% comment %}
+						{% endcomment %}G{% endif %}H{% endfor %}I</div>
 
 					<div class='section-title'>Confession of Faith</div>
 					<div class='section-text-block'>
