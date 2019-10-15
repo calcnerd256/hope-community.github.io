@@ -45,11 +45,9 @@ permalink: /about/
 					<div class='section-title'>Confession of Faith</div>
 					<div class='section-text-block'>{% for confession in site.data.about.confession_of_faith %}
 
-<h3>{{ confession.name }}</h3>{% for paragraph in confession.paragraphs %}{{ paragraph }}
-<p>
-	We believe in one Lord, Jesus Christ, the only Son of God.
-	He is eternally begotten of the Father: God from God, Light from Light, true God from true God.
-	He is at once complete in Godhead and complete in manhood, truly God and truly man.
+<h3>{{ confession.name }}</h3>{% for paragraph in confession.paragraphs %}
+<p>{% for sentence in paragraph %}
+	{{ sentence }}We believe in one Lord, Jesus Christ, the only Son of God.{% endfor %}
 </p>{% unless forloop.last %}{{ "" }}
 {% endunless %}{% endfor %}{% endfor %}
 					</div>
