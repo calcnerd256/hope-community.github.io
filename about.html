@@ -43,8 +43,27 @@ permalink: /about/
 					{% endcomment %}{{ "" }}{% endif %}{% endfor %}</div>
 
 					<div class='section-title'>Confession of Faith</div>
+					<div class='section-text-block'>{% for confession in site.data.about.confession_of_faith %}{{ confession }}
+
+<h3>Jesus Christ</h3>
+<p>
+	We believe in one Lord, Jesus Christ, the only Son of God.
+	He is eternally begotten of the Father: God from God, Light from Light, true God from true God.
+	He is at once complete in Godhead and complete in manhood, truly God and truly man.
+</p>
+
+<p>
+	Through him all things were made.
+	For us and for our salvation he came down from heaven.
+	By the power of the Holy Spirit he became incarnate from the virgin Mary and was made man.
+	For our sake he was crucified under Pontius Pilate; he suffered death and was buried.
+	On the third day he rose again in accordance with the scriptures.
+	He ascended into heaven and is seated at the right hand of the Father.
+	He will come again in glory to judge the living and the dead, and his kingdom will have no end.
+</p>{% endfor %}
+					</div>
 					<div class='section-text-block'>
-{{ site.data.about.confession_of_faith }}
+
 <h3>The Trinity</h3>
 <p>
 	We believe in and worship one God in three persons.
