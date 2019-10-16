@@ -63,7 +63,13 @@ permalink: /about/
 										by&hellip;
 						</p>
 
-						<ol class="about-ordered-list">
+						<ol class="about-ordered-list">{% for value in site.data.about.relational_values %}
+							<li>
+								{{ value.value }}
+								({% for verse in value.verses %}{{ verse }}{% unless forloop.last %},
+									{% endunless %}{% endfor %})
+							</li>
+{% endfor %}
 							<li>
 								Loving others and putting their needs first
 								(Philippians 2:4,
