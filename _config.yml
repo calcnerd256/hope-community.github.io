@@ -8,3 +8,5 @@ plugins:
   - jekyll-seo-tag
 sass:
   style: expanded
+exclude:
+  - README.md
