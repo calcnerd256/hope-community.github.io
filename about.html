@@ -79,7 +79,7 @@ permalink: /about/
 						<ol class="about-ordered-list">{% for mission in site.data.about.community_mission %}
 							<li>
 								{{ mission.mission }}
-								({% for verse in verses %}{{ verse }}{% unless forloop.last %},
+								({% for verse in mission.verses %}{{ verse }}{% unless forloop.last %},
 									{% endunless %}{% endfor %})
 							</li>{% endfor %}
 						</ol>
