@@ -17,18 +17,11 @@ permalink: /connect/
 				<div class='col-md-3'></div>
 				<div class='col-md-9 big-info-block'>
 					<div class='section-title'>Growth Groups</div>
-					<div class='section-text-block'>
-						<p>
-							Much of our community life happens in Growth Groups.
-							These are small groups centered on God’s word, prayer, and deep relationships.
-							They exist to help people grow as disciples of Jesus, give people spiritual families to lean into, and bring the love of Jesus to the neighborhoods in which they meet.
+					<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
+						<p>{% for sentence in paragraph %}
+							{{ sentence }}{% endfor %}
 						</p>
-
-						<p>
-							Most of our Growth Groups gather weekly in homes and apartment complexes throughout Norman.
-							If you would like know more about these groups and how to get involved in one, please contact Matthew Beasley at matthewhenrybeasley@gmail.com.
-						</p>
-
+{% endfor %}
 					</div>{% comment %}
 
 					<!--<div class='section-title'>Locations</div>
