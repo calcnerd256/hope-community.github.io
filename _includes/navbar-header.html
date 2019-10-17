@@ -1,25 +1,9 @@
-{{ include.indentation }}<div class="navbar-header">{% comment %}
-{{ include.indentation }}		hamburger menu
-{{ include.indentation }}	{% endcomment %}
-{{ include.indentation }}	<button{% comment %}
-{{ include.indentation }}		{% endcomment %}{% comment %}
-{{ include.indentation }}{% endcomment %} type="button"{% comment %}
-{{ include.indentation }}{% endcomment %} class="navbar-toggle"{% comment %}
-{{ include.indentation }}{% endcomment %} data-toggle="collapse"{% comment %}
-{{ include.indentation }}{% endcomment %} data-target="#myNavbar"{% comment %}
-{{ include.indentation }}		{% endcomment %}{% comment %}
-{{ include.indentation }}	{% endcomment %}>
+{{ include.indentation }}<div class="navbar-header">
+{{ include.indentation }}	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 {{ include.indentation }}		<span class="icon-bar"></span>
 {{ include.indentation }}		<span class="icon-bar"></span>
 {{ include.indentation }}		<span class="icon-bar"></span>
 {{ include.indentation }}	</button>
-{{ include.indentation }}	<a{% comment %}
-{{ include.indentation }}		{% endcomment %}{% comment %}
-{{ include.indentation }}{% endcomment %} class="navbar-brand"{% comment %}
-{{ include.indentation }}{% endcomment %} href="{{ "/" | relative_url}}"{% comment %}
-{{ include.indentation }}		{% endcomment %}{% comment %}
-{{ include.indentation }}	{% endcomment %}>{% comment %}
-{{ include.indentation }}{% endcomment %}{{ site.data.index.church.name.full }}{% comment %}
-{{ include.indentation }}	{% endcomment %}</a>
+{{ include.indentation }}	<a class="navbar-brand" href="{{ "/" | relative_url}}">{{ site.data.index.church.name.full }}</a>
 {{ include.indentation }}</div>
 {%- comment -%}trailing newline{%- endcomment -%}
