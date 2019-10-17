@@ -6,15 +6,12 @@
 	name="viewport"
 	content="width=device-width, initial-scale=1"
 %}
-		<link{% comment %}
-			{% endcomment %} rel="stylesheet"{% comment %}
-			{% endcomment %} href="{% comment %}
-				{% endcomment %}
-{{- site.data.head.urls.bootstrap.css -}}
-					{% comment %}
-				{% endcomment %}"{% comment %}
-			{% endcomment %} type = "text/css"{% comment %}
-		{% endcomment %}/>
+{% include head-link.html
+	indentation="		"
+	relfirst=true
+	hreffirst=true
+	href=site.data.head.urls.bootstrap.css
+%}
 		<link{% comment %}
 			{% endcomment %}{% capture main_css_uri %}
 				{{- "/assets/css/main.css" | relative_url -}}

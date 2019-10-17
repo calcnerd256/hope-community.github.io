@@ -1,0 +1,30 @@
+{{ include.indentation }}{% comment %}
+{% endcomment %}<link{% comment %}
+	{% endcomment %}{% if include.relfirst %}{% comment %}
+		{% endcomment %} rel="stylesheet"{% comment %}
+	{% endcomment %}{% endif %}{% comment %}
+
+	{% endcomment %}{% if include.hreffirst %}{% comment %}
+		{% endcomment %} href="{{ include.href }}"{% comment %}
+	{% endcomment %}{% endif %}{% comment %}
+
+	{% endcomment %}{% unless include.omittype %}{% comment %}
+		{% endcomment %} type="text/css"{% comment %}
+	{% endcomment %}{% endunless %}{% comment %}
+
+	{% endcomment %}{% if include.media %}{% comment %}
+		{% endcomment %} media="{{ include.media }}"{% comment %}
+	{% endcomment %}{% endif %}{% comment %}
+
+	{% endcomment %}{% unless include.hreffirst %}{% comment %}
+		{% endcomment %} href="{{ include.href }}"{% comment %}
+	{% endcomment %}{% endunless %}{% comment %}
+
+	{% endcomment %}{% unless include.relfirst %}{% comment %}
+		{% endcomment %} rel="stylesheet"{% comment %}
+	{% endcomment %}{% endunless %}{% comment %}
+	{% endcomment %}{% unless include.omitclose %}{% comment %}
+		{% endcomment %}/{% comment %}
+	{% endcomment %}{% endunless %}{% comment %}
+{% endcomment %}>
+{%- comment -%}trailing newline{%- endcomment -%}
