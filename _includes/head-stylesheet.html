@@ -23,8 +23,10 @@
 	{% endcomment %}{% unless include.relfirst %}{% comment %}
 		{% endcomment %} rel="stylesheet"{% comment %}
 	{% endcomment %}{% endunless %}{% comment %}
-	{% endcomment %}{% unless include.omitclose %}{% comment %}
-		{% endcomment %}/{% comment %}
-	{% endcomment %}{% endunless %}{% comment %}
+
+{% endcomment %}{% unless include.omitclose %}{% comment %}
+	{% endcomment %}/{% comment %}
+{% endcomment %}{% endunless %}{% comment %}
+
 {% endcomment %}>
 {%- comment -%}trailing newline{%- endcomment -%}

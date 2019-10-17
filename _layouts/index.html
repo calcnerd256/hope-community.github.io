@@ -40,14 +40,14 @@
 					{{- site.data.head.urls.bootstrap.js -}}
 					{% comment %}
 				{% endcomment %}"></script>
-		<link{% comment %}
-			{% endcomment %} href="{% comment %}
-				{% endcomment %}
-{{- site.data.head.urls.google.font_css -}}
-					{% comment %}
-				{% endcomment %}"{% comment %}
-			{% endcomment %} rel="stylesheet"{% comment %}
-		{% endcomment %}>
+{% include head-link.html
+	indentation="		"
+	relfirst=false
+	hreffirst=false
+	omittype=true
+	href=site.data.head.urls.google.font_css
+	omitclose=true
+%}
 
 {% seo %}
 	</head>
