@@ -12,15 +12,18 @@
 	hreffirst=true
 	href=site.data.head.urls.bootstrap.css
 %}
-		<link{% comment %}
-			{% endcomment %}{% capture main_css_uri %}
-				{{- "/assets/css/main.css" | relative_url -}}
-			{% endcapture %}{% comment %}
-			{% endcomment %} rel="stylesheet"{% comment %}
-			{% endcomment %} type="text/css"{% comment %}
-			{% endcomment %} media="screen,projection"{% comment %}
-			{% endcomment %} href="{{ main_css_uri }}"{% comment %}
-		{% endcomment %}>
+{% comment %}
+
+{% endcomment %}{% capture main_css_uri %}
+	{{- "/assets/css/main.css" | relative_url -}}
+{% endcapture %}{% include head-link.html
+	indentation="		"
+	relfirst=true
+	hreffirst=false
+	media="screen,projection"
+	href=main_css_uri
+	omitclose=true
+%}
 		<script{% comment %}
 			{% endcomment %} type="text/javascript"{% comment %}
 			{% endcomment %} src="javascripts/script.js"></script>
