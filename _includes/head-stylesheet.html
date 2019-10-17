@@ -9,7 +9,7 @@
 	{% endcomment %}{% endif %}{% comment %}
 
 	{% endcomment %}{% unless include.omittype %}{% comment %}
-		{% endcomment %} type="text/css"{% comment %}
+		{% endcomment %} type{{ extra_space }}={{ extra_space }}"text/css"{% comment %}
 	{% endcomment %}{% endunless %}{% comment %}
 
 	{% endcomment %}{% if include.media %}{% comment %}
