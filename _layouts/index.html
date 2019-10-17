@@ -6,7 +6,7 @@
 	name="viewport"
 	content="width=device-width, initial-scale=1"
 %}
-{% include head-link.html
+{% include head-stylesheet.html
 	indentation="		"
 	relfirst=true
 	hreffirst=true
@@ -16,7 +16,7 @@
 
 {% endcomment %}{% capture main_css_uri %}
 	{{- "/assets/css/main.css" | relative_url -}}
-{% endcapture %}{% include head-link.html
+{% endcapture %}{% include head-stylesheet.html
 	indentation="		"
 	relfirst=true
 	hreffirst=false
@@ -40,7 +40,7 @@
 					{{- site.data.head.urls.bootstrap.js -}}
 					{% comment %}
 				{% endcomment %}"></script>
-{% include head-link.html
+{% include head-stylesheet.html
 	indentation="		"
 	relfirst=false
 	hreffirst=false
