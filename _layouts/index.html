@@ -13,16 +13,17 @@
 {{- site.data.head.urls.bootstrap.css -}}
 					{% comment %}
 				{% endcomment %}"{% comment %}
-			{% endcomment %} type = "text/css"/>
+			{% endcomment %} type = "text/css"{% comment %}
+		{% endcomment %}/>
 		<link{% comment %}
+			{% endcomment %}{% capture main_css_uri %}
+				{{- "/assets/css/main.css" | relative_url -}}
+			{% endcapture %}{% comment %}
 			{% endcomment %} rel="stylesheet"{% comment %}
 			{% endcomment %} type="text/css"{% comment %}
 			{% endcomment %} media="screen,projection"{% comment %}
-			{% endcomment %} href="{% comment %}
-				{% endcomment %}
-{{- "/assets/css/main.css" | relative_url -}}
-					{% comment %}
-				{% endcomment %}">
+			{% endcomment %} href="{% comment %}{{ main_css_uri }}"{% comment %}
+		{% endcomment %}>
 		<script{% comment %}
 			{% endcomment %} type="text/javascript"{% comment %}
 			{% endcomment %} src="javascripts/script.js"></script>
@@ -45,7 +46,8 @@
 {{- site.data.head.urls.google.font_css -}}
 					{% comment %}
 				{% endcomment %}"{% comment %}
-			{% endcomment %} rel="stylesheet">
+			{% endcomment %} rel="stylesheet"{% comment %}
+		{% endcomment %}>
 
 {% seo %}
 	</head>
