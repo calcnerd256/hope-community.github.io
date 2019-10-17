@@ -9,10 +9,10 @@ permalink: /secretvisitpage/
 					<div class="cover-text-bg">
 						<div class='cover-text'></div>
 						<p class='cover-text-secondary'>
-							Join us Sundays at 10:30 A.M.
+							Join us {{ site.data.index.meeting.day }} at {{ site.data.index.meeting.time }}
 						</p>
 						<p class='cover-text-thirdiary'>
-							1637 Stubbeman Ave, Norman, OK
+							{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
 						</p>
 					</div>
 				</div>
@@ -37,7 +37,7 @@ permalink: /secretvisitpage/
 					<div class='section-title'>Directions</div>
 					<div class='section-text-block'>
 						<p>
-							We currently meet at the Union Baptist Association buidling at 1637 Stubbeman Ave, Norman.
+							We currently meet at the Union Baptist Association buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
 							It's right next to Norman North High School, just north of E Robinson St.
 						</p>
 					</div>
