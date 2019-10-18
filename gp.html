@@ -4,34 +4,36 @@ title: GOSPEL PROJECT
 permalink: /gp/
 indentation:
   page: "		"
+  gospelproject: "		"
+  applytoday: "		"
 ---
 
 
 {%- capture gospelproject -%}
-{{ page.indentation.page }}			<div class='section-title'>Gospel Project</div>
-{{ page.indentation.page }}			<div class='section-text-block'>
-{{ page.indentation.page }}				<p>
-{{ page.indentation.page }}					The Gospel Project is a two month discipleship training and missions immersion experience in Oklahoma City and Norman for students and adults sponsored by Hope Community Church and Christ Community Church.
-{{ page.indentation.page }}					The Gospel Project will be June 1 through July 31.
-{{ page.indentation.page }}					Gospel Project participants will:
-{{ page.indentation.page }}				</p>
-{{ page.indentation.page }}				<ul id='gp-list'>
+{{ page.indentation.gospelproject }}			<div class='section-title'>Gospel Project</div>
+{{ page.indentation.gospelproject }}			<div class='section-text-block'>
+{{ page.indentation.gospelproject }}				<p>
+{{ page.indentation.gospelproject }}					The Gospel Project is a two month discipleship training and missions immersion experience in Oklahoma City and Norman for students and adults sponsored by Hope Community Church and Christ Community Church.
+{{ page.indentation.gospelproject }}					The Gospel Project will be June 1 through July 31.
+{{ page.indentation.gospelproject }}					Gospel Project participants will:
+{{ page.indentation.gospelproject }}				</p>
+{{ page.indentation.gospelproject }}				<ul id='gp-list'>
 {% for activity in site.data.gp.activities %}
-{{ page.indentation.page }}					<li>{{ activity }}</li>
+{{ page.indentation.gospelproject }}					<li>{{ activity }}</li>
 {% endfor %}
-{{ page.indentation.page }}				</ul>
+{{ page.indentation.gospelproject }}				</ul>
 
-{{ page.indentation.page }}			</div>
+{{ page.indentation.gospelproject }}			</div>
 {%- endcapture -%}
 
 
 {%- capture applytoday -%}
-{{ page.indentation.page }}			<div class='section-title'>Apply Today</div>
-{{ page.indentation.page }}			<div class='section-text-block'>
-{{ page.indentation.page }}				For brochures and application materials, please
-{{ page.indentation.page }}					email Matthew Beasley at matthewhenrybeasley@gmail.com
-{{ page.indentation.page }}					or use our online application <a href="http://christcommunityok.com/apply">here</a>.
-{{ page.indentation.page }}			</div>
+{{ page.indentation.applytoday }}			<div class='section-title'>Apply Today</div>
+{{ page.indentation.applytoday }}			<div class='section-text-block'>
+{{ page.indentation.applytoday }}				For brochures and application materials, please
+{{ page.indentation.applytoday }}					email Matthew Beasley at matthewhenrybeasley@gmail.com
+{{ page.indentation.applytoday }}					or use our online application <a href="http://christcommunityok.com/apply">here</a>.
+{{ page.indentation.applytoday }}			</div>
 {%- endcapture -%}
 
 
