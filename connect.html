@@ -5,6 +5,17 @@ permalink: /connect/
 indentation:
   page: "		"
 ---
+
+{%- capture growthgroups -%}
+{{ indentation.page }}			<div class='section-title'>Growth Groups</div>
+{{ indentation.page }}			<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
+{{ indentation.page }}				<p>{% for sentence in paragraph %}
+{{ indentation.page }}					{{ sentence }}{% endfor %}
+{{ indentation.page }}				</p>
+{% endfor %}
+{{ indentation.page }}			</div>
+{%- endcapture -%}
+
 {{ indentation.page }}<div class="container-fluid" id="home">
 {{ indentation.page }}	<div class="row">
 {{ indentation.page }}		<div class="bg-connect">
@@ -18,13 +29,7 @@ indentation:
 {{ indentation.page }}	<div class='row'>
 {{ indentation.page }}		<div class='col-md-3'></div>
 {{ indentation.page }}		<div class='col-md-9 big-info-block'>
-{{ indentation.page }}			<div class='section-title'>Growth Groups</div>
-{{ indentation.page }}			<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
-{{ indentation.page }}				<p>{% for sentence in paragraph %}
-{{ indentation.page }}					{{ sentence }}{% endfor %}
-{{ indentation.page }}				</p>
-{% endfor %}
-{{ indentation.page }}			</div>{% comment %}
+{{ growthgroups }}{% comment %}
 
 {{ indentation.page }}				<!--<div class='section-title'>Locations</div>
 {{ indentation.page }}			<div class='section-text-block'>List of growth group locations here and times they meet</div>-->{% endcomment %}
