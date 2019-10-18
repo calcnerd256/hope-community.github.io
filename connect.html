@@ -4,26 +4,25 @@ title: CONNECT
 permalink: /connect/
 indentation:
   page: "		"
+  growthgroups: "		"
 ---
 
 {%- capture growthgroups -%}
-{{ page.indentation.page }}			<div class='section-title'>Growth Groups</div>
-{{ page.indentation.page }}			<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
-{{ page.indentation.page }}				<p>{% for sentence in paragraph %}
-{{ page.indentation.page }}					{{ sentence }}{% endfor %}
-{{ page.indentation.page }}				</p>
+{{ page.indentation.growthgroups }}			<div class='section-title'>Growth Groups</div>
+{{ page.indentation.growthgroups }}			<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
+{{ page.indentation.growthgroups }}				<p>{% for sentence in paragraph %}
+{{ page.indentation.growthgroups }}					{{ sentence }}{% endfor %}
+{{ page.indentation.growthgroups }}				</p>
 {% endfor %}
-{{ page.indentation.page }}			</div>
+{{ page.indentation.growthgroups }}			</div>
 {%- endcapture -%}
 
 {{ page.indentation.page }}<div class="container-fluid" id="home">
 {{ page.indentation.page }}	<div class="row">
 {{ page.indentation.page }}		<div class="bg-connect">
-{{ page.indentation.page }}			<div class="cover-text-bg">
-{{ page.indentation.page }}				{%- comment -%}
+{{ page.indentation.page }}			<div class="cover-text-bg">{% comment %}
 {{ page.indentation.page }}				<!--<div class='cover-text'>Growth Groups</div>-->
-{{ page.indentation.page }}				{%- endcomment -%}
-{{ page.indentation.page }}			</div>
+{{ page.indentation.page }}			{% endcomment %}</div>
 {{ page.indentation.page }}		</div>
 {{ page.indentation.page }}	</div>
 {{ page.indentation.page }}	<div class='row'>
