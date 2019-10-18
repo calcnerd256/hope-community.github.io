@@ -2,31 +2,33 @@
 layout: index
 title: CONNECT
 permalink: /connect/
+indentation:
+  page: "		"
 ---
-		<div class="container-fluid" id="home">
-			<div class="row">
-				<div class="bg-connect">
-					<div class="cover-text-bg">
-						{%- comment -%}
-						<!--<div class='cover-text'>Growth Groups</div>-->
-						{%- endcomment -%}
-					</div>
-				</div>
-			</div>
-			<div class='row'>
-				<div class='col-md-3'></div>
-				<div class='col-md-9 big-info-block'>
-					<div class='section-title'>Growth Groups</div>
-					<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
-						<p>{% for sentence in paragraph %}
-							{{ sentence }}{% endfor %}
-						</p>
+{{ indentation.page }}<div class="container-fluid" id="home">
+{{ indentation.page }}	<div class="row">
+{{ indentation.page }}		<div class="bg-connect">
+{{ indentation.page }}			<div class="cover-text-bg">
+{{ indentation.page }}				{%- comment -%}
+{{ indentation.page }}				<!--<div class='cover-text'>Growth Groups</div>-->
+{{ indentation.page }}				{%- endcomment -%}
+{{ indentation.page }}			</div>
+{{ indentation.page }}		</div>
+{{ indentation.page }}	</div>
+{{ indentation.page }}	<div class='row'>
+{{ indentation.page }}		<div class='col-md-3'></div>
+{{ indentation.page }}		<div class='col-md-9 big-info-block'>
+{{ indentation.page }}			<div class='section-title'>Growth Groups</div>
+{{ indentation.page }}			<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
+{{ indentation.page }}				<p>{% for sentence in paragraph %}
+{{ indentation.page }}					{{ sentence }}{% endfor %}
+{{ indentation.page }}				</p>
 {% endfor %}
-					</div>{% comment %}
+{{ indentation.page }}			</div>{% comment %}
 
-					<!--<div class='section-title'>Locations</div>
-					<div class='section-text-block'>List of growth group locations here and times they meet</div>-->{% endcomment %}
-				</div>
-			</div>
-		</div>
+{{ indentation.page }}				<!--<div class='section-title'>Locations</div>
+{{ indentation.page }}			<div class='section-text-block'>List of growth group locations here and times they meet</div>-->{% endcomment %}
+{{ indentation.page }}		</div>
+{{ indentation.page }}	</div>
+{{ indentation.page }}</div>
 {%- comment -%}{%- endcomment -%}
