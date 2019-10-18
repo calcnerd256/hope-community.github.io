@@ -1,0 +1,9 @@
+{{ include.indentation }}{% comment %}
+{% endcomment %}<script{% comment %}
+	{% endcomment %}{% unless include.omittype %}{% comment %}
+		{% endcomment %} type="text/javascript"{% comment %}
+	{% endcomment %}{% endunless %}{% comment %}
+
+	{% endcomment %} src="{{ include.src }}"{% comment %}
+{% endcomment %}></script>
+{%- comment -%}trailing newline{%- endcomment -%}

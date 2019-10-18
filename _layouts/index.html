@@ -25,22 +25,19 @@
 	href=main_css_uri
 	omitclose=true
 %}
-		<script{% comment %}
-			{% endcomment %} type="text/javascript"{% comment %}
-			{% endcomment %} src="javascripts/script.js"></script>
-		<script{% comment %}
-			{% endcomment %} src="{% comment %}
-				{% endcomment %}
-{{- site.data.head.urls.google.jquery -}}
-					{% comment %}
-				{% endcomment %}"></script>
-		<script{% comment %}
-			{% endcomment %} type="text/javascript"{% comment %}
-			{% endcomment %} src="{% comment %}
-				{% endcomment %}
-					{{- site.data.head.urls.bootstrap.js -}}
-					{% comment %}
-				{% endcomment %}"></script>
+{% include head-stylesheet.html
+	indentation="		"
+	src="javascripts/script.js"
+%}
+{% include head-stylesheet.html
+	indentation="		"
+	omittype=true
+	src=site.data.head.urls.google.jquery
+%}
+{% include head-stylesheet.html
+	indentation="		"
+	src=site.data.head.urls.bootstrap.js
+%}
 {% include head-stylesheet.html
 	indentation="		"
 	relfirst=false
