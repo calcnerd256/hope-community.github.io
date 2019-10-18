@@ -3,8 +3,8 @@ layout: index
 indentation:
   page: "		"
   joinus: "						"
-  directions: "		"
-  contactus: "		"
+  directions: "					"
+  contactus: "					"
 ---
 
 {%- capture joinus -%}
@@ -20,23 +20,23 @@ indentation:
 {%- endcapture -%}
 
 {%- capture directions -%}
-{{ page.indentation.directions }}			<div class='section-title'>Directions</div>
-{{ page.indentation.directions }}			<div class='section-text-block'>
-{{ page.indentation.directions }}				<p>
-{{ page.indentation.directions }}					We currently meet at the Union Baptist Association office buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
-{{ page.indentation.directions }}					It's just to the south of Norman North High School and just north of E Robinson St.
-{{ page.indentation.directions }}				</p>
-{{ page.indentation.directions }}			</div>
+{{ page.indentation.directions }}<div class='section-title'>Directions</div>
+{{ page.indentation.directions }}<div class='section-text-block'>
+{{ page.indentation.directions }}	<p>
+{{ page.indentation.directions }}		We currently meet at the Union Baptist Association office buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
+{{ page.indentation.directions }}		It's just to the south of Norman North High School and just north of E Robinson St.
+{{ page.indentation.directions }}	</p>
+{{ page.indentation.directions }}</div>
 {%- endcapture -%}
 
 {%- capture contactus -%}
-{{ page.indentation.contactus }}			<div class='section-title'>Contact Us</div>
-{{ page.indentation.contactus }}			<div class='section-text-block'>
-{{ page.indentation.contactus }}				<p>
-{{ page.indentation.contactus }}					If you would like to know more about {{ site.data.index.church.name.full }}, or want to contact us for any other reason,
-{{ page.indentation.contactus }}						email {{ site.data.index.pastor.name }} at {{ site.data.index.pastor.e_mail }}.
-{{ page.indentation.contactus }}				</p>
-{{ page.indentation.contactus }}			</div>
+{{ page.indentation.contactus }}<div class='section-title'>Contact Us</div>
+{{ page.indentation.contactus }}<div class='section-text-block'>
+{{ page.indentation.contactus }}	<p>
+{{ page.indentation.contactus }}		If you would like to know more about {{ site.data.index.church.name.full }}, or want to contact us for any other reason,
+{{ page.indentation.contactus }}			email {{ site.data.index.pastor.name }} at {{ site.data.index.pastor.e_mail }}.
+{{ page.indentation.contactus }}	</p>
+{{ page.indentation.contactus }}</div>
 {%- endcapture -%}
 
 {{ page.indentation.page }}<div class="container-fluid" id="home">
