@@ -5,17 +5,9 @@ permalink: /gp/
 indentation:
   page: "		"
 ---
-{{ page.indentation.page }}<div class="container-fluid" id="home">
-{{ page.indentation.page }}	<div class="row">
-{{ page.indentation.page }}		<div class="bg-gp">
-{{ page.indentation.page }}			<div class="cover-text-bg">{% comment %}
-{{ page.indentation.page }}				<!--<div class='cover-text'>The Gospel Project</div>-->{% endcomment %}
-{{ page.indentation.page }}			</div>
-{{ page.indentation.page }}		</div>
-{{ page.indentation.page }}	</div>
-{{ page.indentation.page }}	<div class='row'>
-{{ page.indentation.page }}		<div class='col-md-3'></div>
-{{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
+
+
+{%- capture gospelproject -%}
 {{ page.indentation.page }}			<div class='section-title'>Gospel Project</div>
 {{ page.indentation.page }}			<div class='section-text-block'>
 {{ page.indentation.page }}				<p>
@@ -30,13 +22,33 @@ indentation:
 {{ page.indentation.page }}				</ul>
 
 {{ page.indentation.page }}			</div>
+{%- endcapture -%}
 
+
+{%- capture applytoday -%}
 {{ page.indentation.page }}			<div class='section-title'>Apply Today</div>
 {{ page.indentation.page }}			<div class='section-text-block'>
 {{ page.indentation.page }}				For brochures and application materials, please
 {{ page.indentation.page }}					email Matthew Beasley at matthewhenrybeasley@gmail.com
 {{ page.indentation.page }}					or use our online application <a href="http://christcommunityok.com/apply">here</a>.
 {{ page.indentation.page }}			</div>
+{%- endcapture -%}
+
+
+{{ page.indentation.page }}<div class="container-fluid" id="home">
+{{ page.indentation.page }}	<div class="row">
+{{ page.indentation.page }}		<div class="bg-gp">
+{{ page.indentation.page }}			<div class="cover-text-bg">{% comment %}
+{{ page.indentation.page }}				<!--<div class='cover-text'>The Gospel Project</div>-->{% endcomment %}
+{{ page.indentation.page }}			</div>
+{{ page.indentation.page }}		</div>
+{{ page.indentation.page }}	</div>
+{{ page.indentation.page }}	<div class='row'>
+{{ page.indentation.page }}		<div class='col-md-3'></div>
+{{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
+{{ gospelproject }}
+
+{{ applytoday }}
 {{ page.indentation.page }}		</div>
 {{ page.indentation.page }}	</div>
 {{ page.indentation.page }}</div>
