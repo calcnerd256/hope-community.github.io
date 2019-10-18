@@ -4,22 +4,23 @@ title: ABOUT
 permalink: /about/
 indentation:
   page: "		"
+  ourstory: "		"
 ---
 
 {%- capture ourstory -%}
-{{ page.indentation.page }}			<div class='section-title'>Our Story</div>
-{{ page.indentation.page }}			<div class='section-text-block'>{%- comment -%}
-{{ page.indentation.page }}				{%- endcomment -%}{% for paragraph in site.data.about.our_story %}
-{{ page.indentation.page }}				<p>{% for sentence in paragraph %}
-{{ page.indentation.page }}					{{ sentence }}{% endfor %}
-{{ page.indentation.page }}				</p>{% comment %}
-{{ page.indentation.page }}					{% endcomment %}{% if forloop.last %}{% comment %}
-{{ page.indentation.page }}						{% endcomment %}
-{{ page.indentation.page }}			{% comment %}
-{{ page.indentation.page }}					{% endcomment %}{% else %}{% comment %}
-{{ page.indentation.page }}						{% endcomment %}
+{{ page.indentation.ourstory }}			<div class='section-title'>Our Story</div>
+{{ page.indentation.ourstory }}			<div class='section-text-block'>{%- comment -%}
+{{ page.indentation.ourstory }}				{%- endcomment -%}{% for paragraph in site.data.about.our_story %}
+{{ page.indentation.ourstory }}				<p>{% for sentence in paragraph %}
+{{ page.indentation.ourstory }}					{{ sentence }}{% endfor %}
+{{ page.indentation.ourstory }}				</p>{% comment %}
+{{ page.indentation.ourstory }}					{% endcomment %}{% if forloop.last %}{% comment %}
+{{ page.indentation.ourstory }}						{% endcomment %}
+{{ page.indentation.ourstory }}			{% comment %}
+{{ page.indentation.ourstory }}					{% endcomment %}{% else %}{% comment %}
+{{ page.indentation.ourstory }}						{% endcomment %}
 {% comment %}
-{{ page.indentation.page }}			{% endcomment %}{{ "" }}{% endif %}{% endfor %}</div>
+{{ page.indentation.ourstory }}			{% endcomment %}{{ "" }}{% endif %}{% endfor %}</div>
 {%- endcapture -%}
 
 {{ page.indentation.page }}<div class="container-fluid" id="home">
@@ -44,6 +45,7 @@ indentation:
 {{ page.indentation.page }}			{%- endcomment -%}</div>
 {{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
 {{ ourstory }}
+
 {{ page.indentation.page }}			<div class='section-title'>Confession of Faith</div>
 {{ page.indentation.page }}			<div class='section-text-block'>{% for confession in site.data.about.confession_of_faith %}
 
