@@ -1,58 +1,40 @@
 {{ include.indentation }}<div{% comment %}
-{{ include.indentation }}	{% endcomment %}{% comment %}
-{{ include.indentation }}{% endcomment %} class="collapse navbar-collapse"{% comment %}
-{{ include.indentation }}{% endcomment %} id="myNavbar"{% comment %}
-{{ include.indentation }}	{% endcomment %}{% comment %}
+{{ include.indentation }}	{% endcomment %} class="collapse navbar-collapse"{% comment %}
+{{ include.indentation }}	{% endcomment %} id="myNavbar"{% comment %}
 {{ include.indentation }}{% endcomment %}>
 {{ include.indentation }}	<ul class="nav navbar-nav navbar-right">{% comment %}
-{{ include.indentation }}<!--	<li><a href="{{ "/visit" | relative_url}}">VISIT</a></li>-->
+{{ include.indentation }}	<!--	<li><a href="{{ "/visit" | relative_url}}">VISIT</a></li>-->
 {{ include.indentation }}		{% endcomment %}
 {{ include.indentation }}		<li>
 {{ include.indentation }}			<a{% comment %}
-{{ include.indentation }}				{% endcomment %}{% comment %}
-{{ include.indentation }}{% endcomment %}{% comment %}
-{{ include.indentation }}		{% endcomment %} href="{{ "/about" | relative_url}}"{% comment %}
-{{ include.indentation }}	{% endcomment %}>{% comment %}
-{{ include.indentation }}		{% endcomment %}ABOUT{% comment %}
-{{ include.indentation }}{% endcomment %}{% comment %}
-{{ include.indentation }}				{% endcomment %}{% comment %}
+{{ include.indentation }}				{% endcomment %} href="{{ "/about" | relative_url}}"{% comment %}
+{{ include.indentation }}			{% endcomment %}>{% comment %}
+{{ include.indentation }}				{% endcomment %}ABOUT{% comment %}
 {{ include.indentation }}			{% endcomment %}</a>
 {{ include.indentation }}		</li>
 {{ include.indentation }}		<li>
 {{ include.indentation }}			<a{% comment %}
-{{ include.indentation }}				{% endcomment %}{% comment %}
-{{ include.indentation }}{% endcomment %}{% comment %}
-{{ include.indentation }}		{% endcomment %} href="{{ "/connect" | relative_url}}"{% comment %}
-{{ include.indentation }}	{% endcomment %}>{% comment %}
-{{ include.indentation }}		{% endcomment %}CONNECT{% comment %}
-{{ include.indentation }}{% endcomment %}{% comment %}
-{{ include.indentation }}				{% endcomment %}{% comment %}
+{{ include.indentation }}				{% endcomment %} href="{{ "/connect" | relative_url}}"{% comment %}
+{{ include.indentation }}			{% endcomment %}>{% comment %}
+{{ include.indentation }}				{% endcomment %}CONNECT{% comment %}
 {{ include.indentation }}			{% endcomment %}</a>
 {{ include.indentation }}		</li>
 {{ include.indentation }}		<li>
 {{ include.indentation }}			<a{% comment %}
-{{ include.indentation }}				{% endcomment %}{% comment %}
-{{ include.indentation }}{% endcomment %}{% comment %}
-{{ include.indentation }}		{% endcomment %} href="{{ "/gp" | relative_url}}"{% comment %}
-{{ include.indentation }}	{% endcomment %}>{% comment %}
-{{ include.indentation }}		{% endcomment %}GOSPEL PROJECT{% comment %}
-{{ include.indentation }}{% endcomment %}{% comment %}
-{{ include.indentation }}				{% endcomment %}{% comment %}
+{{ include.indentation }}				{% endcomment %} href="{{ "/gp" | relative_url}}"{% comment %}
+{{ include.indentation }}			{% endcomment %}>{% comment %}
+{{ include.indentation }}				{% endcomment %}GOSPEL PROJECT{% comment %}
 {{ include.indentation }}			{% endcomment %}</a>
 {{ include.indentation }}		</li>
 {{ include.indentation }}		<li>
 {{ include.indentation }}			<a{% comment %}
-{{ include.indentation }}				{% endcomment %}{% comment %}
-{{ include.indentation }}{% endcomment %}{% comment %}
-{{ include.indentation }}		{% endcomment %} href="https://goo.gl/gciC9i"{% comment %}
-{{ include.indentation }}	{% endcomment %}>{% comment %}
-{{ include.indentation }}		{% endcomment %}GIVE{% comment %}
-{{ include.indentation }}{% endcomment %}{% comment %}
-{{ include.indentation }}				{% endcomment %}{% comment %}
+{{ include.indentation }}				{% endcomment %} href="https://goo.gl/gciC9i"{% comment %}
+{{ include.indentation }}			{% endcomment %}>{% comment %}
+{{ include.indentation }}				{% endcomment %}GIVE{% comment %}
 {{ include.indentation }}			{% endcomment %}</a>
 {{ include.indentation }}		</li>{% comment %}
-{{ include.indentation }}{%- assign default_paths = site.pages | map: "path" -%}
-{{ include.indentation }}{%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
 {{ include.indentation }}<!--		{%- if page_paths -%}
 {{ include.indentation }}			{% for path in page_paths %}
 {{ include.indentation }}{%- assign my_page = site.pages | where: "path", path | first -%}
