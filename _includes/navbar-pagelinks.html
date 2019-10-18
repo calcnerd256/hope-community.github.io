@@ -4,10 +4,7 @@
 {{ include.indentation }}{% endcomment %} id="myNavbar"{% comment %}
 {{ include.indentation }}	{% endcomment %}{% comment %}
 {{ include.indentation }}{% endcomment %}>
-{{ include.indentation }}	<ul class="nav navbar-nav navbar-right">
-{{ include.indentation }}		{%- comment -%}
-{{ include.indentation }}		{%- endcomment -%}
-{{ include.indentation }}		{% comment %}
+{{ include.indentation }}	<ul class="nav navbar-nav navbar-right">{% comment %}
 {{ include.indentation }}<!--	<li><a href="{{ "/visit" | relative_url}}">VISIT</a></li>-->
 {{ include.indentation }}		{% endcomment %}
 {{ include.indentation }}		<li>
@@ -53,10 +50,7 @@
 {{ include.indentation }}{% endcomment %}{% comment %}
 {{ include.indentation }}				{% endcomment %}{% comment %}
 {{ include.indentation }}			{% endcomment %}</a>
-{{ include.indentation }}		</li>
-{{ include.indentation }}		{%- comment -%}
-{{ include.indentation }}		{%- endcomment -%}
-{{ include.indentation }}		{% comment %}
+{{ include.indentation }}		</li>{% comment %}
 {{ include.indentation }}{%- assign default_paths = site.pages | map: "path" -%}
 {{ include.indentation }}{%- assign page_paths = site.header_pages | default: default_paths -%}
 {{ include.indentation }}<!--		{%- if page_paths -%}
