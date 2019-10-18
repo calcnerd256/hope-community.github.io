@@ -7,33 +7,33 @@ indentation:
 ---
 
 {%- capture growthgroups -%}
-{{ indentation.page }}			<div class='section-title'>Growth Groups</div>
-{{ indentation.page }}			<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
-{{ indentation.page }}				<p>{% for sentence in paragraph %}
-{{ indentation.page }}					{{ sentence }}{% endfor %}
-{{ indentation.page }}				</p>
+{{ page.indentation.page }}			<div class='section-title'>Growth Groups</div>
+{{ page.indentation.page }}			<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
+{{ page.indentation.page }}				<p>{% for sentence in paragraph %}
+{{ page.indentation.page }}					{{ sentence }}{% endfor %}
+{{ page.indentation.page }}				</p>
 {% endfor %}
-{{ indentation.page }}			</div>
+{{ page.indentation.page }}			</div>
 {%- endcapture -%}
 
-{{ indentation.page }}<div class="container-fluid" id="home">
-{{ indentation.page }}	<div class="row">
-{{ indentation.page }}		<div class="bg-connect">
-{{ indentation.page }}			<div class="cover-text-bg">
-{{ indentation.page }}				{%- comment -%}
-{{ indentation.page }}				<!--<div class='cover-text'>Growth Groups</div>-->
-{{ indentation.page }}				{%- endcomment -%}
-{{ indentation.page }}			</div>
-{{ indentation.page }}		</div>
-{{ indentation.page }}	</div>
-{{ indentation.page }}	<div class='row'>
-{{ indentation.page }}		<div class='col-md-3'></div>
-{{ indentation.page }}		<div class='col-md-9 big-info-block'>
+{{ page.indentation.page }}<div class="container-fluid" id="home">
+{{ page.indentation.page }}	<div class="row">
+{{ page.indentation.page }}		<div class="bg-connect">
+{{ page.indentation.page }}			<div class="cover-text-bg">
+{{ page.indentation.page }}				{%- comment -%}
+{{ page.indentation.page }}				<!--<div class='cover-text'>Growth Groups</div>-->
+{{ page.indentation.page }}				{%- endcomment -%}
+{{ page.indentation.page }}			</div>
+{{ page.indentation.page }}		</div>
+{{ page.indentation.page }}	</div>
+{{ page.indentation.page }}	<div class='row'>
+{{ page.indentation.page }}		<div class='col-md-3'></div>
+{{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
 {{ growthgroups }}{% comment %}
 
-{{ indentation.page }}				<!--<div class='section-title'>Locations</div>
-{{ indentation.page }}			<div class='section-text-block'>List of growth group locations here and times they meet</div>-->{% endcomment %}
-{{ indentation.page }}		</div>
-{{ indentation.page }}	</div>
-{{ indentation.page }}</div>
+{{ page.indentation.page }}				<!--<div class='section-title'>Locations</div>
+{{ page.indentation.page }}			<div class='section-text-block'>List of growth group locations here and times they meet</div>-->{% endcomment %}
+{{ page.indentation.page }}		</div>
+{{ page.indentation.page }}	</div>
+{{ page.indentation.page }}</div>
 {%- comment -%}{%- endcomment -%}
