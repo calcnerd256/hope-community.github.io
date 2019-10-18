@@ -1,77 +1,68 @@
 ---
 layout: index
+indentation: "		"
 ---
 
-{%- comment -%}
-	weird consequences of stripped whitespace
-{%- endcomment -%}
+{%- capture joinus -%}
+{{ page.indentation }}				<p class='cover-text'></p>
+{{ page.indentation }}				<p class='cover-text-secondary'>
+{{ page.indentation }}					Join us {{ site.data.index.meeting.day }}
+{{ page.indentation }}						at {{ site.data.index.meeting.time }}
+{{ page.indentation }}				</p>
+{{ page.indentation }}				<p class='cover-text-thirdiary'>
+{{ page.indentation }}					{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }},
+{{ page.indentation }}						{{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
+{{ page.indentation }}				</p>
+{%- endcapture -%}
 
-	{% comment %}
-		we actually want to capture the following indentation:
-		{% endcomment %}		{% comment %}
-	{% endcomment %}
+{{ page.indentation }}<div class="container-fluid" id="home">
+{{ page.indentation }}	<div class="row">
+{{ page.indentation }}		<div class="bg-1">
+{{ page.indentation }}			<div class='cover-text-bg'>
+{{ joinus }}
+{{ page.indentation }}				{%- comment -%}
+{{ page.indentation }}				{%- endcomment -%}
+{{ page.indentation }}				{% comment %}
+{{ page.indentation }}				<!--<a class="btn btn-secondary text-black" href="{{ "/visit" | relative_url}}">More Info</a>-->
+{{ page.indentation }}				{% endcomment %}
+{{ page.indentation }}			</div>
+{{ page.indentation }}		</div>
+{{ page.indentation }}	</div>
+{{ page.indentation }}	<div class='row'>
+{{ page.indentation }}		<div class='col-md-3'></div>
+{{ page.indentation }}		<div class='col-md-9 big-info-block'>
+{{ page.indentation }}			<div class='section-title'>Directions</div>
+{{ page.indentation }}			<div class='section-text-block'>
+{{ page.indentation }}				<p>
+{{ page.indentation }}					We currently meet at the Union Baptist Association office buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
+{{ page.indentation }}					It's just to the south of Norman North High School and just north of E Robinson St.
+{{ page.indentation }}				</p>
+{{ page.indentation }}			</div>
+{{ page.indentation }}			{%- comment -%}
+{{ page.indentation }}			{%- endcomment -%}
+{{ page.indentation }}			{% comment %}
+{{ page.indentation }}		<!--	<div class='section-title'>What To Expect</div>
+{{ page.indentation }}			<div class='section-text-block'>
+{{ page.indentation }}				<p>We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.</p>
 
-{%- comment -%}
-	yet we also want to omit all the newlines around here
-	sorry that it's confusing
-{%- endcomment -%}
-
-		<div class="container-fluid" id="home">
-			<div class="row">
-				<div class="bg-1">
-					<div class='cover-text-bg'>
-						<p class='cover-text'></p>
-						<p class='cover-text-secondary'>
-							Join us {{ site.data.index.meeting.day }}
-								at {{ site.data.index.meeting.time }}
-						</p>
-						<p class='cover-text-thirdiary'>
-							{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }},
-								{{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
-						</p>
-						{%- comment -%}
-						{%- endcomment -%}
-						{% comment %}
-						<!--<a class="btn btn-secondary text-black" href="{{ "/visit" | relative_url}}">More Info</a>-->
-						{% endcomment %}
-					</div>
-				</div>
-			</div>
-			<div class='row'>
-				<div class='col-md-3'></div>
-				<div class='col-md-9 big-info-block'>
-					<div class='section-title'>Directions</div>
-					<div class='section-text-block'>
-						<p>
-							We currently meet at the Union Baptist Association office buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
-							It's just to the south of Norman North High School and just north of E Robinson St.
-						</p>
-					</div>
-					{%- comment -%}
-					{%- endcomment -%}
-					{% comment %}
-				<!--	<div class='section-title'>What To Expect</div>
-					<div class='section-text-block'>
-						<p>We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.</p>
-
-						<p>Our community includes people who have been following Jesus for many years, some who are new to Christian faith, and some who are exploring Christianity for the first time. Regardless of your background, beliefs, or life situation, we would love to have you join us this Sunday.</p>-->
-					{% endcomment %}
-					<div class='section-title'>Contact Us</div>
-					<div class='section-text-block'>
-						<p>
-							If you would like to know more about {{ site.data.index.church.name.full }}, or want to contact us for any other reason,
-								email {{ site.data.index.pastor.name }} at {{ site.data.index.pastor.e_mail }}.
-						</p>
-					</div>
-					{%- comment -%}
-					{%- endcomment -%}
-					{% comment %}
-	<!--				<div class='section-title'>Commonly Asked Questions</div>
-					<div class='section-text-block'>
-						<p>Throw some Q&A in here.</p>
-					</div>-->
-					{% endcomment %}
-				</div>
-			</div>
-		</div>
+{{ page.indentation }}				<p>Our community includes people who have been following Jesus for many years, some who are new to Christian faith, and some who are exploring Christianity for the first time. Regardless of your background, beliefs, or life situation, we would love to have you join us this Sunday.</p>-->
+{{ page.indentation }}			{% endcomment %}
+{{ page.indentation }}			<div class='section-title'>Contact Us</div>
+{{ page.indentation }}			<div class='section-text-block'>
+{{ page.indentation }}				<p>
+{{ page.indentation }}					If you would like to know more about {{ site.data.index.church.name.full }}, or want to contact us for any other reason,
+{{ page.indentation }}						email {{ site.data.index.pastor.name }} at {{ site.data.index.pastor.e_mail }}.
+{{ page.indentation }}				</p>
+{{ page.indentation }}			</div>
+{{ page.indentation }}			{%- comment -%}
+{{ page.indentation }}			{%- endcomment -%}
+{{ page.indentation }}			{% comment %}
+{{ page.indentation }}<!--			<div class='section-title'>Commonly Asked Questions</div>
+{{ page.indentation }}			<div class='section-text-block'>
+{{ page.indentation }}				<p>Throw some Q&A in here.</p>
+{{ page.indentation }}			</div>-->
+{{ page.indentation }}			{% endcomment %}
+{{ page.indentation }}		</div>
+{{ page.indentation }}	</div>
+{{ page.indentation }}</div>
 {%- comment -%}{%- endcomment -%}
