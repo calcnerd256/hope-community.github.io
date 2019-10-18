@@ -4,23 +4,23 @@ title: ABOUT
 permalink: /about/
 indentation:
   page: "		"
-  ourstory: "		"
+  ourstory: "					"
 ---
 
 {%- capture ourstory -%}
-{{ page.indentation.ourstory }}			<div class='section-title'>Our Story</div>
-{{ page.indentation.ourstory }}			<div class='section-text-block'>{%- comment -%}
-{{ page.indentation.ourstory }}				{%- endcomment -%}{% for paragraph in site.data.about.our_story %}
-{{ page.indentation.ourstory }}				<p>{% for sentence in paragraph %}
-{{ page.indentation.ourstory }}					{{ sentence }}{% endfor %}
-{{ page.indentation.ourstory }}				</p>{% comment %}
-{{ page.indentation.ourstory }}					{% endcomment %}{% if forloop.last %}{% comment %}
-{{ page.indentation.ourstory }}						{% endcomment %}
-{{ page.indentation.ourstory }}			{% comment %}
-{{ page.indentation.ourstory }}					{% endcomment %}{% else %}{% comment %}
-{{ page.indentation.ourstory }}						{% endcomment %}
+{{ page.indentation.ourstory }}<div class='section-title'>Our Story</div>
+{{ page.indentation.ourstory }}<div class='section-text-block'>{%- comment -%}
+{{ page.indentation.ourstory }}	{%- endcomment -%}{% for paragraph in site.data.about.our_story %}
+{{ page.indentation.ourstory }}	<p>{% for sentence in paragraph %}
+{{ page.indentation.ourstory }}		{{ sentence }}{% endfor %}
+{{ page.indentation.ourstory }}	</p>{% comment %}
+{{ page.indentation.ourstory }}		{% endcomment %}{% if forloop.last %}{% comment %}
+{{ page.indentation.ourstory }}			{% endcomment %}
+{{ page.indentation.ourstory }}{% comment %}
+{{ page.indentation.ourstory }}		{% endcomment %}{% else %}{% comment %}
+{{ page.indentation.ourstory }}			{% endcomment %}
 {% comment %}
-{{ page.indentation.ourstory }}			{% endcomment %}{{ "" }}{% endif %}{% endfor %}</div>
+{{ page.indentation.ourstory }}{% endcomment %}{{ "" }}{% endif %}{% endfor %}</div>
 {%- endcapture -%}
 
 {{ page.indentation.page }}<div class="container-fluid" id="home">
