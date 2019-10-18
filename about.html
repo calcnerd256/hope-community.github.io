@@ -5,6 +5,9 @@ permalink: /about/
 indentation:
   page: "		"
   ourstory: "					"
+  confession:
+    overview: "		"
+    item: ""
 ---
 
 
@@ -20,15 +23,15 @@ indentation:
 
 
 {%- capture confession -%}
-{{ page.indentation.page }}			<div class='section-title'>Confession of Faith</div>
-{{ page.indentation.page }}			<div class='section-text-block'>{% for confession in site.data.about.confession_of_faith %}
+{{ page.indentation.confession.overview }}			<div class='section-title'>Confession of Faith</div>
+{{ page.indentation.confession.overview }}			<div class='section-text-block'>{% for confession in site.data.about.confession_of_faith %}
 
-<h3>{{ confession.name }}</h3>{% for paragraph in confession.paragraphs %}
-<p>{% for sentence in paragraph %}
-	{{ sentence }}{% endfor %}
-</p>{% unless forloop.last %}{{ "" }}
-{% endunless %}{% endfor %}{% endfor %}
-{{ page.indentation.page }}			</div>
+{{ page.indentation.confession.item }}<h3>{{ confession.name }}</h3>{% for paragraph in confession.paragraphs %}
+{{ page.indentation.confession.item }}<p>{% for sentence in paragraph %}
+{{ page.indentation.confession.item }}	{{ sentence }}{% endfor %}
+{{ page.indentation.confession.item }}</p>{% unless forloop.last %}{{ "" }}
+{{ page.indentation.confession.item }}{% endunless %}{% endfor %}{% endfor %}
+{{ page.indentation.confession.overview }}			</div>
 {%- endcapture -%}
 
 
