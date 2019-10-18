@@ -2,40 +2,42 @@
 layout: index
 title: GOSPEL PROJECT
 permalink: /gp/
+indentation:
+  page: "		"
 ---
-		<div class="container-fluid" id="home">
-			<div class="row">
-				<div class="bg-gp">
-					<div class="cover-text-bg">{% comment %}
-						<!--<div class='cover-text'>The Gospel Project</div>-->{% endcomment %}
-					</div>
-				</div>
-			</div>
-			<div class='row'>
-				<div class='col-md-3'></div>
-				<div class='col-md-9 big-info-block'>
-					<div class='section-title'>Gospel Project</div>
-					<div class='section-text-block'>
-						<p>
-							The Gospel Project is a two month discipleship training and missions immersion experience in Oklahoma City and Norman for students and adults sponsored by Hope Community Church and Christ Community Church.
-							The Gospel Project will be June 1 through July 31.
-							Gospel Project participants will:
-						</p>
-						<ul id='gp-list'>
+{{ page.indentation.page }}<div class="container-fluid" id="home">
+{{ page.indentation.page }}	<div class="row">
+{{ page.indentation.page }}		<div class="bg-gp">
+{{ page.indentation.page }}			<div class="cover-text-bg">{% comment %}
+{{ page.indentation.page }}				<!--<div class='cover-text'>The Gospel Project</div>-->{% endcomment %}
+{{ page.indentation.page }}			</div>
+{{ page.indentation.page }}		</div>
+{{ page.indentation.page }}	</div>
+{{ page.indentation.page }}	<div class='row'>
+{{ page.indentation.page }}		<div class='col-md-3'></div>
+{{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
+{{ page.indentation.page }}			<div class='section-title'>Gospel Project</div>
+{{ page.indentation.page }}			<div class='section-text-block'>
+{{ page.indentation.page }}				<p>
+{{ page.indentation.page }}					The Gospel Project is a two month discipleship training and missions immersion experience in Oklahoma City and Norman for students and adults sponsored by Hope Community Church and Christ Community Church.
+{{ page.indentation.page }}					The Gospel Project will be June 1 through July 31.
+{{ page.indentation.page }}					Gospel Project participants will:
+{{ page.indentation.page }}				</p>
+{{ page.indentation.page }}				<ul id='gp-list'>
 {% for activity in site.data.gp.activities %}
-							<li>{{ activity }}</li>
+{{ page.indentation.page }}					<li>{{ activity }}</li>
 {% endfor %}
-						</ul>
+{{ page.indentation.page }}				</ul>
 
-					</div>
+{{ page.indentation.page }}			</div>
 
-					<div class='section-title'>Apply Today</div>
-					<div class='section-text-block'>
-						For brochures and application materials, please
-							email Matthew Beasley at matthewhenrybeasley@gmail.com
-							or use our online application <a href="http://christcommunityok.com/apply">here</a>.
-					</div>
-				</div>
-			</div>
-		</div>
+{{ page.indentation.page }}			<div class='section-title'>Apply Today</div>
+{{ page.indentation.page }}			<div class='section-text-block'>
+{{ page.indentation.page }}				For brochures and application materials, please
+{{ page.indentation.page }}					email Matthew Beasley at matthewhenrybeasley@gmail.com
+{{ page.indentation.page }}					or use our online application <a href="http://christcommunityok.com/apply">here</a>.
+{{ page.indentation.page }}			</div>
+{{ page.indentation.page }}		</div>
+{{ page.indentation.page }}	</div>
+{{ page.indentation.page }}</div>
 {%- comment -%}terminal linebreak{%- endcomment -%}
