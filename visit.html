@@ -5,10 +5,9 @@ permalink: /secretvisitpage/
 indentation:
   page: "		"
 ---
-{{ page.indentation.page }}<div class="container-fluid" id="home">
-{{ page.indentation.page }}	<div class="row">
-{{ page.indentation.page }}		<div class="bg-visit">
-{{ page.indentation.page }}			<div class="cover-text-bg">
+
+
+{%- capture joinus -%}
 {{ page.indentation.page }}				<div class='cover-text'></div>
 {{ page.indentation.page }}				<p class='cover-text-secondary'>
 {{ page.indentation.page }}					Join us {{ site.data.index.meeting.day }} at {{ site.data.index.meeting.time }}
@@ -16,12 +15,10 @@ indentation:
 {{ page.indentation.page }}				<p class='cover-text-thirdiary'>
 {{ page.indentation.page }}					{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
 {{ page.indentation.page }}				</p>
-{{ page.indentation.page }}			</div>
-{{ page.indentation.page }}		</div>
-{{ page.indentation.page }}	</div>
-{{ page.indentation.page }}	<div class='row'>
-{{ page.indentation.page }}		<div class='col-md-3'></div>
-{{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
+{%- endcapture -%}
+
+
+{%- capture expect -%}
 {{ page.indentation.page }}			<div class='section-title'>What To Expect</div>
 {{ page.indentation.page }}			<div class='section-text-block'>
 {{ page.indentation.page }}				<p>
@@ -35,7 +32,10 @@ indentation:
 {{ page.indentation.page }}						and some who are exploring Christianity for the first time.
 {{ page.indentation.page }}				</p>
 {{ page.indentation.page }}			</div>
+{%- endcapture -%}
 
+
+{%- capture directions -%}
 {{ page.indentation.page }}			<div class='section-title'>Directions</div>
 {{ page.indentation.page }}			<div class='section-text-block'>
 {{ page.indentation.page }}				<p>
@@ -43,11 +43,33 @@ indentation:
 {{ page.indentation.page }}					It's right next to Norman North High School, just north of E Robinson St.
 {{ page.indentation.page }}				</p>
 {{ page.indentation.page }}			</div>
+{%- endcapture -%}
 
+
+{%- capture faq -%}
 {{ page.indentation.page }}			<div class='section-title'>Commonly Asked Questions</div>
 {{ page.indentation.page }}			<div class='section-text-block'>
 {{ page.indentation.page }}				<p>Throw some Q&A in here.</p>
 {{ page.indentation.page }}			</div>
+{%- endcapture -%}
+
+
+{{ page.indentation.page }}<div class="container-fluid" id="home">
+{{ page.indentation.page }}	<div class="row">
+{{ page.indentation.page }}		<div class="bg-visit">
+{{ page.indentation.page }}			<div class="cover-text-bg">
+{{ joinus }}
+{{ page.indentation.page }}			</div>
+{{ page.indentation.page }}		</div>
+{{ page.indentation.page }}	</div>
+{{ page.indentation.page }}	<div class='row'>
+{{ page.indentation.page }}		<div class='col-md-3'></div>
+{{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
+{{ expect }}
+
+{{ directions }}
+
+{{ faq }}
 {{ page.indentation.page }}		</div>
 {{ page.indentation.page }}	</div>
 {{ page.indentation.page }}</div>
