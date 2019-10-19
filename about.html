@@ -8,9 +8,7 @@ ourstory:
   indentation: "					"
 confession:
   title: Confession of Faith
-  indentation:
-    overview: "					"
-    item: ""
+  indentation: ""
 relationalvalues:
   title: Relational Values
   indentation: "					"
@@ -21,29 +19,27 @@ communitymission:
 
 
 {%- capture ourstory -%}
-{{ page.ourstory.indentation }}<div class='section-text-block'>{% for paragraph in site.data.about.our_story %}
+{% for paragraph in site.data.about.our_story %}
 {{ page.ourstory.indentation }}	<p>{% for sentence in paragraph %}
 {{ page.ourstory.indentation }}		{{ sentence }}{% endfor %}
 {{ page.ourstory.indentation }}	</p>{% if forloop.last %}{{ "" }}
 {{ page.ourstory.indentation }}{{ "" }}{% else %}{{ "" }}
-{{ "" }}{% endif %}{% endfor %}</div>
+{{ "" }}{% endif %}{% endfor %}
 {%- endcapture -%}
 
 
 {%- capture confession -%}
-{{ page.confession.indentation.overview }}<div class='section-text-block'>{% for confession in site.data.about.confession_of_faith %}
+{% for confession in site.data.about.confession_of_faith %}
 
-{{ page.confession.indentation.item }}<h3>{{ confession.name }}</h3>{% for paragraph in confession.paragraphs %}
-{{ page.confession.indentation.item }}<p>{% for sentence in paragraph %}
-{{ page.confession.indentation.item }}	{{ sentence }}{% endfor %}
-{{ page.confession.indentation.item }}</p>{% unless forloop.last %}{{ "" }}
-{{ page.confession.indentation.item }}{% endunless %}{% endfor %}{% endfor %}
-{{ page.confession.indentation.overview }}</div>
+{{ page.confession.indentation }}<h3>{{ confession.name }}</h3>{% for paragraph in confession.paragraphs %}
+{{ page.confession.indentation }}<p>{% for sentence in paragraph %}
+{{ page.confession.indentation }}	{{ sentence }}{% endfor %}
+{{ page.confession.indentation }}</p>{% unless forloop.last %}{{ "" }}
+{{ page.confession.indentation }}{% endunless %}{% endfor %}{% endfor %}
 {%- endcapture -%}
 
 
 {%- capture relationalvalues -%}
-{{ page.relationalvalues.indentation }}<div class='section-text-block'>
 {{ page.relationalvalues.indentation }}	<p>
 {{ page.relationalvalues.indentation }}		As disciples of Jesus Christ,
 {{ page.relationalvalues.indentation }}			we seek to
@@ -60,12 +56,10 @@ communitymission:
 {{ page.relationalvalues.indentation }}				{% endunless %}{% endfor %})
 {{ page.relationalvalues.indentation }}		</li>{% endfor %}
 {{ page.relationalvalues.indentation }}	</ol>
-{{ page.relationalvalues.indentation }}</div>
 {%- endcapture -%}
 
 
 {%- capture communitymission -%}
-{{ page.communitymission.indentation }}<div class='section-text-block'>
 {{ page.communitymission.indentation }}	<p>
 {{ page.communitymission.indentation }}		As disciples of Jesus Christ, we seek to glorify God by&hellip;
 {{ page.communitymission.indentation }}	</p>
@@ -76,7 +70,6 @@ communitymission:
 {{ page.communitymission.indentation }}				{% endunless %}{% endfor %})
 {{ page.communitymission.indentation }}		</li>{% endfor %}
 {{ page.communitymission.indentation }}	</ol>
-{{ page.communitymission.indentation }}</div>
 {%- endcapture -%}
 
 
@@ -102,15 +95,20 @@ communitymission:
 {{ page.indentation }}			{%- endcomment -%}</div>
 {{ page.indentation }}		<div class='col-md-9 big-info-block'>
 {{ page.indentation }}			<div class='section-title'>{{ page.ourstory.title }}</div>
-{{ ourstory }}
+{{ page.indentation }}			<div class='section-text-block'>{{ ourstory }}</div>
 
 {{ page.indentation }}			<div class='section-title'>{{ page.confession.title }}</div>
-{{ confession }}
+{{ page.indentation }}			<div class='section-text-block'>{{ confession }}
+{{ page.indentation }}			</div>
 
 {{ page.indentation }}			<div class='section-title'>{{ page.relationalvalues.title }}</div>
+{{ page.indentation }}			<div class='section-text-block'>
 {{ relationalvalues }}
+{{ page.indentation }}			</div>
 {{ page.indentation }}			<div class='section-title'>{{ page.communitymission.title }}</div>
+{{ page.indentation }}			<div class='section-text-block'>
 {{ communitymission }}
+{{ page.indentation }}			</div>
 {{ page.indentation }}		</div>
 {{ page.indentation }}	</div>
 {{ page.indentation }}</div>
