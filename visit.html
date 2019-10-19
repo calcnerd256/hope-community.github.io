@@ -7,13 +7,13 @@ joinus:
   indentation: "						"
 expect:
   title: What To Expect
-  indentation: "					"
+  indentation: "						"
 directions:
   title: Directions
-  indentation: "					"
+  indentation: "						"
 faq:
   title: Commonly Asked Questions
-  indentation: "					"
+  indentation: "						"
 ---
 
 
@@ -28,29 +28,29 @@ faq:
 
 
 {%- capture expect -%}
-{{ page.expect.indentation }}	<p>
-{{ page.expect.indentation }}		We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.
-{{ page.expect.indentation }}	</p>
+{{ page.expect.indentation }}<p>
+{{ page.expect.indentation }}	We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.
+{{ page.expect.indentation }}</p>
 
-{{ page.expect.indentation }}	<p>
-{{ page.expect.indentation }}		Our community includes
-{{ page.expect.indentation }}			people who have been following Jesus for many years,
-{{ page.expect.indentation }}			some who are new to Christian faith,
-{{ page.expect.indentation }}			and some who are exploring Christianity for the first time.
-{{ page.expect.indentation }}	</p>
+{{ page.expect.indentation }}<p>
+{{ page.expect.indentation }}	Our community includes
+{{ page.expect.indentation }}		people who have been following Jesus for many years,
+{{ page.expect.indentation }}		some who are new to Christian faith,
+{{ page.expect.indentation }}		and some who are exploring Christianity for the first time.
+{{ page.expect.indentation }}</p>
 {%- endcapture -%}
 
 
 {%- capture directions -%}
-{{ page.directions.indentation }}	<p>
-{{ page.directions.indentation }}		We currently meet at the Union Baptist Association buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
-{{ page.directions.indentation }}		It's right next to Norman North High School, just north of E Robinson St.
-{{ page.directions.indentation }}	</p>
+{{ page.directions.indentation }}<p>
+{{ page.directions.indentation }}	We currently meet at the Union Baptist Association buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
+{{ page.directions.indentation }}	It's right next to Norman North High School, just north of E Robinson St.
+{{ page.directions.indentation }}</p>
 {%- endcapture -%}
 
 
 {%- capture faq -%}
-{{ page.faq.indentation }}	<p>Throw some Q&amp;A in here.</p>
+{{ page.faq.indentation }}<p>Throw some Q&amp;A in here.</p>
 {%- endcapture -%}
 
 
