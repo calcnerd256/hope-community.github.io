@@ -2,8 +2,7 @@
 layout: index
 title: CONNECT
 permalink: /connect/
-indentation:
-  page: "		"
+indentation: "		"
 growthgroups:
   title: Growth Groups
   indentation: "						"
@@ -17,24 +16,24 @@ growthgroups:
 {% endfor %}
 {%- endcapture -%}
 
-{{ page.indentation.page }}<div class="container-fluid" id="home">
-{{ page.indentation.page }}	<div class="row">
-{{ page.indentation.page }}		<div class="bg-connect">
-{{ page.indentation.page }}			<div class="cover-text-bg">{% comment %}
-{{ page.indentation.page }}				<!--<div class='cover-text'>Growth Groups</div>-->
-{{ page.indentation.page }}			{% endcomment %}</div>
-{{ page.indentation.page }}		</div>
-{{ page.indentation.page }}	</div>
-{{ page.indentation.page }}	<div class='row'>
-{{ page.indentation.page }}		<div class='col-md-3'></div>
-{{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
-{{ page.indentation.page }}			<div class='section-title'>{{ page.growthgroups.title }}</div>
-{{ page.indentation.page }}			<div class='section-text-block'>{{ growthgroups }}
-{{ page.indentation.page }}			</div>{% comment %}
+{{ page.indentation }}<div class="container-fluid" id="home">
+{{ page.indentation }}	<div class="row">
+{{ page.indentation }}		<div class="bg-connect">
+{{ page.indentation }}			<div class="cover-text-bg">{% comment %}
+{{ page.indentation }}				<!--<div class='cover-text'>Growth Groups</div>-->
+{{ page.indentation }}			{% endcomment %}</div>
+{{ page.indentation }}		</div>
+{{ page.indentation }}	</div>
+{{ page.indentation }}	<div class='row'>
+{{ page.indentation }}		<div class='col-md-3'></div>
+{{ page.indentation }}		<div class='col-md-9 big-info-block'>
+{{ page.indentation }}			<div class='section-title'>{{ page.growthgroups.title }}</div>
+{{ page.indentation }}			<div class='section-text-block'>{{ growthgroups }}
+{{ page.indentation }}			</div>{% comment %}
 
-{{ page.indentation.page }}				<!--<div class='section-title'>Locations</div>
-{{ page.indentation.page }}			<div class='section-text-block'>List of growth group locations here and times they meet</div>-->{% endcomment %}
-{{ page.indentation.page }}		</div>
-{{ page.indentation.page }}	</div>
-{{ page.indentation.page }}</div>
+{{ page.indentation }}				<!--<div class='section-title'>Locations</div>
+{{ page.indentation }}			<div class='section-text-block'>List of growth group locations here and times they meet</div>-->{% endcomment %}
+{{ page.indentation }}		</div>
+{{ page.indentation }}	</div>
+{{ page.indentation }}</div>
 {%- comment -%}{%- endcomment -%}
