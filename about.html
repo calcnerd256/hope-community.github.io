@@ -11,10 +11,10 @@ confession:
   indentation: ""
 relationalvalues:
   title: Relational Values
-  indentation: "					"
+  indentation: "						"
 communitymission:
   title: Community Mission
-  indentation: "					"
+  indentation: "						"
 ---
 
 
@@ -40,36 +40,36 @@ communitymission:
 
 
 {%- capture relationalvalues -%}
-{{ page.relationalvalues.indentation }}	<p>
-{{ page.relationalvalues.indentation }}		As disciples of Jesus Christ,
-{{ page.relationalvalues.indentation }}			we seek to
-{{ page.relationalvalues.indentation }}				live out
-{{ page.relationalvalues.indentation }}					the relational values
-{{ page.relationalvalues.indentation }}						of God's kingdom
-{{ page.relationalvalues.indentation }}					by&hellip;
-{{ page.relationalvalues.indentation }}	</p>
+{{ page.relationalvalues.indentation }}<p>
+{{ page.relationalvalues.indentation }}	As disciples of Jesus Christ,
+{{ page.relationalvalues.indentation }}		we seek to
+{{ page.relationalvalues.indentation }}			live out
+{{ page.relationalvalues.indentation }}				the relational values
+{{ page.relationalvalues.indentation }}					of God's kingdom
+{{ page.relationalvalues.indentation }}				by&hellip;
+{{ page.relationalvalues.indentation }}</p>
 
-{{ page.relationalvalues.indentation }}	<ol class="about-ordered-list">{% for value in site.data.about.relational_values %}
-{{ page.relationalvalues.indentation }}		<li>
-{{ page.relationalvalues.indentation }}			{{ value.value }}
-{{ page.relationalvalues.indentation }}			({% for verse in value.verses %}{{ verse }}{% unless forloop.last %},
-{{ page.relationalvalues.indentation }}				{% endunless %}{% endfor %})
-{{ page.relationalvalues.indentation }}		</li>{% endfor %}
-{{ page.relationalvalues.indentation }}	</ol>
+{{ page.relationalvalues.indentation }}<ol class="about-ordered-list">{% for value in site.data.about.relational_values %}
+{{ page.relationalvalues.indentation }}	<li>
+{{ page.relationalvalues.indentation }}		{{ value.value }}
+{{ page.relationalvalues.indentation }}		({% for verse in value.verses %}{{ verse }}{% unless forloop.last %},
+{{ page.relationalvalues.indentation }}			{% endunless %}{% endfor %})
+{{ page.relationalvalues.indentation }}	</li>{% endfor %}
+{{ page.relationalvalues.indentation }}</ol>
 {%- endcapture -%}
 
 
 {%- capture communitymission -%}
-{{ page.communitymission.indentation }}	<p>
-{{ page.communitymission.indentation }}		As disciples of Jesus Christ, we seek to glorify God by&hellip;
-{{ page.communitymission.indentation }}	</p>
-{{ page.communitymission.indentation }}	<ol class="about-ordered-list">{% for mission in site.data.about.community_mission %}
-{{ page.communitymission.indentation }}		<li>
-{{ page.communitymission.indentation }}			{{ mission.mission }}
-{{ page.communitymission.indentation }}			({% for verse in mission.verses %}{{ verse }}{% unless forloop.last %},
-{{ page.communitymission.indentation }}				{% endunless %}{% endfor %})
-{{ page.communitymission.indentation }}		</li>{% endfor %}
-{{ page.communitymission.indentation }}	</ol>
+{{ page.communitymission.indentation }}<p>
+{{ page.communitymission.indentation }}	As disciples of Jesus Christ, we seek to glorify God by&hellip;
+{{ page.communitymission.indentation }}</p>
+{{ page.communitymission.indentation }}<ol class="about-ordered-list">{% for mission in site.data.about.community_mission %}
+{{ page.communitymission.indentation }}	<li>
+{{ page.communitymission.indentation }}		{{ mission.mission }}
+{{ page.communitymission.indentation }}		({% for verse in mission.verses %}{{ verse }}{% unless forloop.last %},
+{{ page.communitymission.indentation }}			{% endunless %}{% endfor %})
+{{ page.communitymission.indentation }}	</li>{% endfor %}
+{{ page.communitymission.indentation }}</ol>
 {%- endcapture -%}
 
 
