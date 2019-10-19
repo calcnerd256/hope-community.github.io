@@ -29,8 +29,6 @@ faq:
 
 
 {%- capture expect -%}
-{{ page.expect.indentation }}<div class='section-title'>{{ page.expect.title }}</div>
-{{ page.expect.indentation }}<div class='section-text-block'>
 {{ page.expect.indentation }}	<p>
 {{ page.expect.indentation }}		We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.
 {{ page.expect.indentation }}	</p>
@@ -41,26 +39,19 @@ faq:
 {{ page.expect.indentation }}			some who are new to Christian faith,
 {{ page.expect.indentation }}			and some who are exploring Christianity for the first time.
 {{ page.expect.indentation }}	</p>
-{{ page.expect.indentation }}</div>
 {%- endcapture -%}
 
 
 {%- capture directions -%}
-{{ page.directions.indentation }}<div class='section-title'>{{ page.directions.title }}</div>
-{{ page.directions.indentation }}<div class='section-text-block'>
 {{ page.directions.indentation }}	<p>
 {{ page.directions.indentation }}		We currently meet at the Union Baptist Association buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
 {{ page.directions.indentation }}		It's right next to Norman North High School, just north of E Robinson St.
 {{ page.directions.indentation }}	</p>
-{{ page.directions.indentation }}</div>
 {%- endcapture -%}
 
 
 {%- capture faq -%}
-{{ page.faq.indentation }}<div class='section-title'>{{ page.faq.title }}</div>
-{{ page.faq.indentation }}<div class='section-text-block'>
 {{ page.faq.indentation }}	<p>Throw some Q&amp;A in here.</p>
-{{ page.faq.indentation }}</div>
 {%- endcapture -%}
 
 
@@ -76,11 +67,20 @@ faq:
 {{ page.indentation.page }}	<div class='row'>
 {{ page.indentation.page }}		<div class='col-md-3'></div>
 {{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
+{{ page.expect.indentation }}<div class='section-title'>{{ page.expect.title }}</div>
+{{ page.expect.indentation }}<div class='section-text-block'>
 {{ expect }}
+{{ page.expect.indentation }}</div>
 
+{{ page.directions.indentation }}<div class='section-title'>{{ page.directions.title }}</div>
+{{ page.directions.indentation }}<div class='section-text-block'>
 {{ directions }}
+{{ page.directions.indentation }}</div>
 
+{{ page.faq.indentation }}<div class='section-title'>{{ page.faq.title }}</div>
+{{ page.faq.indentation }}<div class='section-text-block'>
 {{ faq }}
+{{ page.faq.indentation }}</div>
 {{ page.indentation.page }}		</div>
 {{ page.indentation.page }}	</div>
 {{ page.indentation.page }}</div>
