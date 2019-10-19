@@ -4,17 +4,19 @@ title: CONNECT
 permalink: /connect/
 indentation:
   page: "		"
-  growthgroups: "					"
+growthgroups:
+  title: Growth Groups
+  indentation: "					"
 ---
 
 {%- capture growthgroups -%}
-{{ page.indentation.growthgroups }}<div class='section-title'>Growth Groups</div>
-{{ page.indentation.growthgroups }}<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
-{{ page.indentation.growthgroups }}	<p>{% for sentence in paragraph %}
-{{ page.indentation.growthgroups }}		{{ sentence }}{% endfor %}
-{{ page.indentation.growthgroups }}	</p>
+{{ page.growthgroups.indentation }}<div class='section-title'>{{ growthgroups.title }}</div>
+{{ page.growthgroups.indentation }}<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
+{{ page.growthgroups.indentation }}	<p>{% for sentence in paragraph %}
+{{ page.growthgroups.indentation }}		{{ sentence }}{% endfor %}
+{{ page.growthgroups.indentation }}	</p>
 {% endfor %}
-{{ page.indentation.growthgroups }}</div>
+{{ page.growthgroups.indentation }}</div>
 {%- endcapture -%}
 
 {{ page.indentation.page }}<div class="container-fluid" id="home">
