@@ -6,16 +6,28 @@ indentation: "		"
 gospelproject:
   title: Gospel Project
   indentation: "						"
+  name: The Gospel Project
+  duration: two month
+  what: discipleship training and missions immersion experience
+  where: Oklahoma City and Norman
+  participants: students and adults
+  sponsors: Hope Community Church and Christ Community Church
+  start: June 1
+  end: July 31
 applytoday:
   title: Apply Today
   indentation: "						"
+  contact:
+    name: Matthew Beasley
+    e_mail: matthewhenrybeasley@gmail.com
+  application_url: http://christcommunityok.com/apply
 ---
 
 
 {%- capture gospelproject -%}
 {{ page.gospelproject.indentation }}<p>
-{{ page.gospelproject.indentation }}	The Gospel Project is a two month discipleship training and missions immersion experience in Oklahoma City and Norman for students and adults sponsored by Hope Community Church and Christ Community Church.
-{{ page.gospelproject.indentation }}	The Gospel Project will be June 1 through July 31.
+{{ page.gospelproject.indentation }}	{{ page.gospelproject.name }} is a {{ page.gospelproject.duration }} {{ page.gospelproject.what }} in {{ page.gospelproject.where }} for {{ page.gospelproject.participants }} sponsored by {{ page.gospelproject.sponsors }}.
+{{ page.gospelproject.indentation }}	The Gospel Project will be {{ page.gospelproject.start }} through {{ page.gospelproject.end }}.
 {{ page.gospelproject.indentation }}	Gospel Project participants will:
 {{ page.gospelproject.indentation }}</p>
 {{ page.gospelproject.indentation }}<ul id='gp-list'>
@@ -28,8 +40,8 @@ applytoday:
 
 {%- capture applytoday -%}
 {{ page.applytoday.indentation }}For brochures and application materials, please
-{{ page.applytoday.indentation }}	email Matthew Beasley at matthewhenrybeasley@gmail.com
-{{ page.applytoday.indentation }}	or use our online application <a href="http://christcommunityok.com/apply">here</a>.
+{{ page.applytoday.indentation }}	email {{ page.applytoday.contact.name }} at {{ page.applytoday.contact.e_mail }}
+{{ page.applytoday.indentation }}	or use our online application <a href="{{ page.applytoday.application_url }}">here</a>.
 {%- endcapture -%}
 
 
