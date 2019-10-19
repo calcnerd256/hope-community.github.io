@@ -7,16 +7,18 @@ indentation:
 joinus:
   indentation: "						"
 expect:
+  title: What To Expect
   indentation: "					"
 directions:
+  title: Directions
   indentation: "					"
 faq:
+  title: Commonly Asked Questions
   indentation: "					"
 ---
 
 
 {%- capture joinus -%}
-{{ page.joinus.indentation }}<div class='cover-text'></div>
 {{ page.joinus.indentation }}<p class='cover-text-secondary'>
 {{ page.joinus.indentation }}	Join us {{ site.data.index.meeting.day }} at {{ site.data.index.meeting.time }}
 {{ page.joinus.indentation }}</p>
@@ -27,7 +29,7 @@ faq:
 
 
 {%- capture expect -%}
-{{ page.expect.indentation }}<div class='section-title'>What To Expect</div>
+{{ page.expect.indentation }}<div class='section-title'>{{ page.expect.title }}</div>
 {{ page.expect.indentation }}<div class='section-text-block'>
 {{ page.expect.indentation }}	<p>
 {{ page.expect.indentation }}		We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.
@@ -44,7 +46,7 @@ faq:
 
 
 {%- capture directions -%}
-{{ page.directions.indentation }}<div class='section-title'>Directions</div>
+{{ page.directions.indentation }}<div class='section-title'>{{ page.directions.title }}</div>
 {{ page.directions.indentation }}<div class='section-text-block'>
 {{ page.directions.indentation }}	<p>
 {{ page.directions.indentation }}		We currently meet at the Union Baptist Association buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
@@ -55,9 +57,9 @@ faq:
 
 
 {%- capture faq -%}
-{{ page.faq.indentation }}<div class='section-title'>Commonly Asked Questions</div>
+{{ page.faq.indentation }}<div class='section-title'>{{ page.faq.title }}</div>
 {{ page.faq.indentation }}<div class='section-text-block'>
-{{ page.faq.indentation }}	<p>Throw some Q&A in here.</p>
+{{ page.faq.indentation }}	<p>Throw some Q&amp;A in here.</p>
 {{ page.faq.indentation }}</div>
 {%- endcapture -%}
 
@@ -66,6 +68,7 @@ faq:
 {{ page.indentation.page }}	<div class="row">
 {{ page.indentation.page }}		<div class="bg-visit">
 {{ page.indentation.page }}			<div class="cover-text-bg">
+{{ page.joinus.indentation }}<div class='cover-text'></div>
 {{ joinus }}
 {{ page.indentation.page }}			</div>
 {{ page.indentation.page }}		</div>
