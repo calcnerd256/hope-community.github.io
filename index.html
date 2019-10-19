@@ -1,83 +1,82 @@
 ---
 layout: index
-indentation:
-  page: "		"
-  joinus: "							"
-  directions: "							"
-  contactus: "							"
-sections:
-  directions:
-    title: Directions
-  contactus:
-    title: Contact Us
+indentation: "		"
+joinus:
+  indentation: "							"
+directions:
+  title: Directions
+  indentation: "							"
+contactus:
+  title: Contact Us
+  indentation: "							"
 ---
 
 {%- capture joinus_secondary -%}
-{{ page.indentation.joinus }}Join us {{ site.data.index.meeting.day }}
-{{ page.indentation.joinus }}	at {{ site.data.index.meeting.time }}
+{{ page.joinus.indentation }}Join us {{ site.data.index.meeting.day }}
+{{ page.joinus.indentation }}	at {{ site.data.index.meeting.time }}
 {%- endcapture -%}
 
 {%- capture joinus_tertiary -%}
-{{ page.indentation.joinus }}{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }},
-{{ page.indentation.joinus }}	{{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
+{{ page.joinus.indentation }}{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }},
+{{ page.joinus.indentation }}	{{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
 {%- endcapture -%}
 
 
 {%- capture directions_block -%}
-{{ page.indentation.directions }}We currently meet at the Union Baptist Association office buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
-{{ page.indentation.directions }}It's just to the south of Norman North High School and just north of E Robinson St.
+{{ page.directions.indentation }}We currently meet at the Union Baptist Association office buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
+{{ page.directions.indentation }}It's just to the south of Norman North High School and just north of E Robinson St.
 {%- endcapture -%}
 
 
 {%- capture contactus_block -%}
-{{ page.indentation.contactus }}If you would like to know more about {{ site.data.index.church.name.full }}, or want to contact us for any other reason,
-{{ page.indentation.contactus }}	email {{ site.data.index.pastor.name }} at {{ site.data.index.pastor.e_mail }}.
+{{ page.contactus.indentation }}If you would like to know more about {{ site.data.index.church.name.full }}, or want to contact us for any other reason,
+{{ page.contactus.indentation }}	email {{ site.data.index.pastor.name }} at {{ site.data.index.pastor.e_mail }}.
 {%- endcapture -%}
 
 
-{{ page.indentation.page }}<div class="container-fluid" id="home">
-{{ page.indentation.page }}	<div class="row">
-{{ page.indentation.page }}		<div class="bg-1">
-{{ page.indentation.page }}			<div class='cover-text-bg'>
-{{ page.indentation.page }}				<p class='cover-text'></p>
-{{ page.indentation.page }}				<p class='cover-text-secondary'>
+{{ page.indentation }}<div class="container-fluid" id="home">
+{{ page.indentation }}	<div class="row">
+{{ page.indentation }}		<div class="bg-1">
+{{ page.indentation }}			<div class='cover-text-bg'>
+{{ page.indentation }}				<p class='cover-text'></p>
+{{ page.indentation }}				<p class='cover-text-secondary'>
 {{ joinus_secondary }}
-{{ page.indentation.page }}				</p>
-{{ page.indentation.page }}				<p class='cover-text-thirdiary'>
+{{ page.indentation }}				</p>
+{{ page.indentation }}				<p class='cover-text-thirdiary'>
 {{ joinus_tertiary }}
-{{ page.indentation.page }}				</p>{% comment %}
-{{ page.indentation.page }}				<!--<a class="btn btn-secondary text-black" href="{{ "/visit" | relative_url}}">More Info</a>-->
-{{ page.indentation.page }}				{% endcomment %}
-{{ page.indentation.page }}			</div>
-{{ page.indentation.page }}		</div>
-{{ page.indentation.page }}	</div>
-{{ page.indentation.page }}	<div class='row'>
-{{ page.indentation.page }}		<div class='col-md-3'></div>
-{{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
-{{ page.indentation.page }}			<div class='section-title'>{{ page.sections.directions.title }}</div>
-{{ page.indentation.page }}			<div class='section-text-block'>
-{{ page.indentation.page }}				<p>
+{{ page.indentation }}				</p>{% comment %}
+{{ page.indentation }}				<!--<a class="btn btn-secondary text-black" href="{{ "/visit" | relative_url}}">More Info</a>-->
+{{ page.indentation }}				{% endcomment %}
+{{ page.indentation }}			</div>
+{{ page.indentation }}		</div>
+{{ page.indentation }}	</div>
+{{ page.indentation }}	<div class='row'>
+{{ page.indentation }}		<div class='col-md-3'></div>
+{{ page.indentation }}		<div class='col-md-9 big-info-block'>
+{{ page.indentation }}			<div class='section-title'>{{ page.directions.title }}</div>
+{{ page.indentation }}			<div class='section-text-block'>
+{{ page.indentation }}				<p>
 {{ directions_block }}
-{{ page.indentation.page }}				</p>
-{{ page.indentation.page }}			</div>{% comment %}
-{{ page.indentation.page }}		<!--	<div class='section-title'>What To Expect</div>
-{{ page.indentation.page }}			<div class='section-text-block'>
-{{ page.indentation.page }}				<p>We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.</p>
+{{ page.indentation }}				</p>
+{{ page.indentation }}			</div>{% comment %}
+{{ page.indentation }}		<!--	<div class='section-title'>What To Expect</div>
+{{ page.indentation }}			<div class='section-text-block'>
+{{ page.indentation }}				<p>We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.</p>
 
-{{ page.indentation.page }}				<p>Our community includes people who have been following Jesus for many years, some who are new to Christian faith, and some who are exploring Christianity for the first time. Regardless of your background, beliefs, or life situation, we would love to have you join us this Sunday.</p>-->
-{{ page.indentation.page }}			{% endcomment %}
-{{ page.indentation.page }}			<div class='section-title'>{{ page.sections.contactus.title }}</div>
-{{ page.indentation.page }}			<div class='section-text-block'>
-{{ page.indentation.page }}				<p>
+{{ page.indentation }}				<p>Our community includes people who have been following Jesus for many years, some who are new to Christian faith, and some who are exploring Christianity for the first time. Regardless of your background, beliefs, or life situation, we would love to have you join us this Sunday.</p>-->
+{{ page.indentation }}			{% endcomment %}
+{{ page.indentation }}			<div class='section-title'>{{ page.contactus.title }}</div>
+{{ page.indentation }}			<div class='section-text-block'>
+{{ page.indentation }}				<p>
 {{ contactus_block }}
-{{ page.indentation.page }}				</p>
-{{ page.indentation.page }}			</div>{% comment %}
-{{ page.indentation.page }}<!--			<div class='section-title'>Commonly Asked Questions</div>
-{{ page.indentation.page }}			<div class='section-text-block'>
-{{ page.indentation.page }}				<p>Throw some Q&A in here.</p>
-{{ page.indentation.page }}			</div>-->
-{{ page.indentation.page }}			{% endcomment %}
-{{ page.indentation.page }}		</div>
-{{ page.indentation.page }}	</div>
-{{ page.indentation.page }}</div>
+{{ page.indentation }}				</p>
+{{ page.indentation }}			</div>{% comment %}
+{{ page.indentation }}<!--			<div class='section-title'>Commonly Asked Questions</div>
+{{ page.indentation }}			<div class='section-text-block'>
+{{ page.indentation }}				<p>Throw some Q&A in here.</p>
+{{ page.indentation }}			</div>-->
+{{ page.indentation }}			{% endcomment %}
+{{ page.indentation }}		</div>
+{{ page.indentation }}	</div>
+{{ page.indentation }}</div>
 {%- comment -%}{%- endcomment -%}
