@@ -2,8 +2,7 @@
 layout: index
 title: VISIT
 permalink: /secretvisitpage/
-indentation:
-  page: "		"
+indentation: "		"
 joinus:
   indentation: "						"
 expect:
@@ -55,18 +54,18 @@ faq:
 {%- endcapture -%}
 
 
-{{ page.indentation.page }}<div class="container-fluid" id="home">
-{{ page.indentation.page }}	<div class="row">
-{{ page.indentation.page }}		<div class="bg-visit">
-{{ page.indentation.page }}			<div class="cover-text-bg">
-{{ page.joinus.indentation }}<div class='cover-text'></div>
+{{ page.indentation }}<div class="container-fluid" id="home">
+{{ page.indentation }}	<div class="row">
+{{ page.indentation }}		<div class="bg-visit">
+{{ page.indentation }}			<div class="cover-text-bg">
+{{ page.indentation }}				<div class='cover-text'></div>
 {{ joinus }}
-{{ page.indentation.page }}			</div>
-{{ page.indentation.page }}		</div>
-{{ page.indentation.page }}	</div>
-{{ page.indentation.page }}	<div class='row'>
-{{ page.indentation.page }}		<div class='col-md-3'></div>
-{{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
+{{ page.indentation }}			</div>
+{{ page.indentation }}		</div>
+{{ page.indentation }}	</div>
+{{ page.indentation }}	<div class='row'>
+{{ page.indentation }}		<div class='col-md-3'></div>
+{{ page.indentation }}		<div class='col-md-9 big-info-block'>
 {{ page.expect.indentation }}<div class='section-title'>{{ page.expect.title }}</div>
 {{ page.expect.indentation }}<div class='section-text-block'>
 {{ expect }}
@@ -81,7 +80,7 @@ faq:
 {{ page.faq.indentation }}<div class='section-text-block'>
 {{ faq }}
 {{ page.faq.indentation }}</div>
-{{ page.indentation.page }}		</div>
-{{ page.indentation.page }}	</div>
-{{ page.indentation.page }}</div>
+{{ page.indentation }}		</div>
+{{ page.indentation }}	</div>
+{{ page.indentation }}</div>
 {%- comment -%}{%- endcomment -%}
