@@ -4,76 +4,80 @@ title: ABOUT
 permalink: /about/
 indentation:
   page: "		"
-  ourstory: "					"
-  confession:
+ourstory:
+  title: Our Story
+  indentation: "					"
+confession:
+  title: Confession of Faith
+  indentation:
     overview: "					"
     item: ""
-  relationalvalues: "					"
-  communitymission: "					"
+relationalvalues:
+  title: Relational Values
+  indentation: "					"
+communitymission:
+  title: Community Mission
+  indentation: "					"
 ---
 
 
 {%- capture ourstory -%}
-{{ page.indentation.ourstory }}<div class='section-title'>Our Story</div>
-{{ page.indentation.ourstory }}<div class='section-text-block'>{% for paragraph in site.data.about.our_story %}
-{{ page.indentation.ourstory }}	<p>{% for sentence in paragraph %}
-{{ page.indentation.ourstory }}		{{ sentence }}{% endfor %}
-{{ page.indentation.ourstory }}	</p>{% if forloop.last %}{{ "" }}
-{{ page.indentation.ourstory }}{{ "" }}{% else %}{{ "" }}
+{{ page.ourstory.indentation }}<div class='section-text-block'>{% for paragraph in site.data.about.our_story %}
+{{ page.ourstory.indentation }}	<p>{% for sentence in paragraph %}
+{{ page.ourstory.indentation }}		{{ sentence }}{% endfor %}
+{{ page.ourstory.indentation }}	</p>{% if forloop.last %}{{ "" }}
+{{ page.ourstory.indentation }}{{ "" }}{% else %}{{ "" }}
 {{ "" }}{% endif %}{% endfor %}</div>
 {%- endcapture -%}
 
 
 {%- capture confession -%}
-{{ page.indentation.confession.overview }}<div class='section-title'>Confession of Faith</div>
-{{ page.indentation.confession.overview }}<div class='section-text-block'>{% for confession in site.data.about.confession_of_faith %}
+{{ page.confession.indentation.overview }}<div class='section-text-block'>{% for confession in site.data.about.confession_of_faith %}
 
-{{ page.indentation.confession.item }}<h3>{{ confession.name }}</h3>{% for paragraph in confession.paragraphs %}
-{{ page.indentation.confession.item }}<p>{% for sentence in paragraph %}
-{{ page.indentation.confession.item }}	{{ sentence }}{% endfor %}
-{{ page.indentation.confession.item }}</p>{% unless forloop.last %}{{ "" }}
-{{ page.indentation.confession.item }}{% endunless %}{% endfor %}{% endfor %}
-{{ page.indentation.confession.overview }}</div>
+{{ page.confession.indentation.item }}<h3>{{ confession.name }}</h3>{% for paragraph in confession.paragraphs %}
+{{ page.confession.indentation.item }}<p>{% for sentence in paragraph %}
+{{ page.confession.indentation.item }}	{{ sentence }}{% endfor %}
+{{ page.confession.indentation.item }}</p>{% unless forloop.last %}{{ "" }}
+{{ page.confession.indentation.item }}{% endunless %}{% endfor %}{% endfor %}
+{{ page.confession.indentation.overview }}</div>
 {%- endcapture -%}
 
 
 {%- capture relationalvalues -%}
-{{ page.indentation.relationalvalues }}<div class='section-title'>Relational Values</div>
-{{ page.indentation.relationalvalues }}<div class='section-text-block'>
-{{ page.indentation.relationalvalues }}	<p>
-{{ page.indentation.relationalvalues }}		As disciples of Jesus Christ,
-{{ page.indentation.relationalvalues }}			we seek to
-{{ page.indentation.relationalvalues }}				live out
-{{ page.indentation.relationalvalues }}					the relational values
-{{ page.indentation.relationalvalues }}						of God's kingdom
-{{ page.indentation.relationalvalues }}					by&hellip;
-{{ page.indentation.relationalvalues }}	</p>
+{{ page.relationalvalues.indentation }}<div class='section-text-block'>
+{{ page.relationalvalues.indentation }}	<p>
+{{ page.relationalvalues.indentation }}		As disciples of Jesus Christ,
+{{ page.relationalvalues.indentation }}			we seek to
+{{ page.relationalvalues.indentation }}				live out
+{{ page.relationalvalues.indentation }}					the relational values
+{{ page.relationalvalues.indentation }}						of God's kingdom
+{{ page.relationalvalues.indentation }}					by&hellip;
+{{ page.relationalvalues.indentation }}	</p>
 
-{{ page.indentation.relationalvalues }}	<ol class="about-ordered-list">{% for value in site.data.about.relational_values %}
-{{ page.indentation.relationalvalues }}		<li>
-{{ page.indentation.relationalvalues }}			{{ value.value }}
-{{ page.indentation.relationalvalues }}			({% for verse in value.verses %}{{ verse }}{% unless forloop.last %},
-{{ page.indentation.relationalvalues }}				{% endunless %}{% endfor %})
-{{ page.indentation.relationalvalues }}		</li>{% endfor %}
-{{ page.indentation.relationalvalues }}	</ol>
-{{ page.indentation.relationalvalues }}</div>
+{{ page.relationalvalues.indentation }}	<ol class="about-ordered-list">{% for value in site.data.about.relational_values %}
+{{ page.relationalvalues.indentation }}		<li>
+{{ page.relationalvalues.indentation }}			{{ value.value }}
+{{ page.relationalvalues.indentation }}			({% for verse in value.verses %}{{ verse }}{% unless forloop.last %},
+{{ page.relationalvalues.indentation }}				{% endunless %}{% endfor %})
+{{ page.relationalvalues.indentation }}		</li>{% endfor %}
+{{ page.relationalvalues.indentation }}	</ol>
+{{ page.relationalvalues.indentation }}</div>
 {%- endcapture -%}
 
 
 {%- capture communitymission -%}
-{{ page.indentation.communitymission }}<div class='section-title'>Community Mission</div>
-{{ page.indentation.communitymission }}<div class='section-text-block'>
-{{ page.indentation.communitymission }}	<p>
-{{ page.indentation.communitymission }}		As disciples of Jesus Christ, we seek to glorify God by&hellip;
-{{ page.indentation.communitymission }}	</p>
-{{ page.indentation.communitymission }}	<ol class="about-ordered-list">{% for mission in site.data.about.community_mission %}
-{{ page.indentation.communitymission }}		<li>
-{{ page.indentation.communitymission }}			{{ mission.mission }}
-{{ page.indentation.communitymission }}			({% for verse in mission.verses %}{{ verse }}{% unless forloop.last %},
-{{ page.indentation.communitymission }}				{% endunless %}{% endfor %})
-{{ page.indentation.communitymission }}		</li>{% endfor %}
-{{ page.indentation.communitymission }}	</ol>
-{{ page.indentation.communitymission }}</div>
+{{ page.communitymission.indentation }}<div class='section-text-block'>
+{{ page.communitymission.indentation }}	<p>
+{{ page.communitymission.indentation }}		As disciples of Jesus Christ, we seek to glorify God by&hellip;
+{{ page.communitymission.indentation }}	</p>
+{{ page.communitymission.indentation }}	<ol class="about-ordered-list">{% for mission in site.data.about.community_mission %}
+{{ page.communitymission.indentation }}		<li>
+{{ page.communitymission.indentation }}			{{ mission.mission }}
+{{ page.communitymission.indentation }}			({% for verse in mission.verses %}{{ verse }}{% unless forloop.last %},
+{{ page.communitymission.indentation }}				{% endunless %}{% endfor %})
+{{ page.communitymission.indentation }}		</li>{% endfor %}
+{{ page.communitymission.indentation }}	</ol>
+{{ page.communitymission.indentation }}</div>
 {%- endcapture -%}
 
 
@@ -98,11 +102,15 @@ indentation:
 {{ page.indentation.page }}		</div>-->
 {{ page.indentation.page }}			{%- endcomment -%}</div>
 {{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
+{{ page.indentation.page }}			<div class='section-title'>{{ page.ourstory.title }}</div>
 {{ ourstory }}
 
+{{ page.indentation.page }}			<div class='section-title'>{{ page.confession.title }}</div>
 {{ confession }}
 
+{{ page.indentation.page }}			<div class='section-title'>{{ page.relationalvalues.title }}</div>
 {{ relationalvalues }}
+{{ page.indentation.page }}			<div class='section-title'>{{ page.communitymission.title }}</div>
 {{ communitymission }}
 {{ page.indentation.page }}		</div>
 {{ page.indentation.page }}	</div>
