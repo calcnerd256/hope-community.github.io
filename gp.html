@@ -5,32 +5,32 @@ permalink: /gp/
 indentation: "		"
 gospelproject:
   title: Gospel Project
-  indentation: "					"
+  indentation: "						"
 applytoday:
   title: Apply Today
-  indentation: "					"
+  indentation: "						"
 ---
 
 
 {%- capture gospelproject -%}
-{{ page.gospelproject.indentation }}	<p>
-{{ page.gospelproject.indentation }}		The Gospel Project is a two month discipleship training and missions immersion experience in Oklahoma City and Norman for students and adults sponsored by Hope Community Church and Christ Community Church.
-{{ page.gospelproject.indentation }}		The Gospel Project will be June 1 through July 31.
-{{ page.gospelproject.indentation }}		Gospel Project participants will:
-{{ page.gospelproject.indentation }}	</p>
-{{ page.gospelproject.indentation }}	<ul id='gp-list'>
+{{ page.gospelproject.indentation }}<p>
+{{ page.gospelproject.indentation }}	The Gospel Project is a two month discipleship training and missions immersion experience in Oklahoma City and Norman for students and adults sponsored by Hope Community Church and Christ Community Church.
+{{ page.gospelproject.indentation }}	The Gospel Project will be June 1 through July 31.
+{{ page.gospelproject.indentation }}	Gospel Project participants will:
+{{ page.gospelproject.indentation }}</p>
+{{ page.gospelproject.indentation }}<ul id='gp-list'>
 {% for activity in site.data.gp.activities %}
-{{ page.gospelproject.indentation }}		<li>{{ activity }}</li>
+{{ page.gospelproject.indentation }}	<li>{{ activity }}</li>
 {% endfor %}
-{{ page.gospelproject.indentation }}	</ul>
+{{ page.gospelproject.indentation }}</ul>
 
 {%- endcapture -%}
 
 
 {%- capture applytoday -%}
-{{ page.applytoday.indentation }}	For brochures and application materials, please
-{{ page.applytoday.indentation }}		email Matthew Beasley at matthewhenrybeasley@gmail.com
-{{ page.applytoday.indentation }}		or use our online application <a href="http://christcommunityok.com/apply">here</a>.
+{{ page.applytoday.indentation }}For brochures and application materials, please
+{{ page.applytoday.indentation }}	email Matthew Beasley at matthewhenrybeasley@gmail.com
+{{ page.applytoday.indentation }}	or use our online application <a href="http://christcommunityok.com/apply">here</a>.
 {%- endcapture -%}
 
 
