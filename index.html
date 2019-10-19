@@ -5,45 +5,47 @@ indentation:
   joinus: "						"
   directions: "					"
   contactus: "					"
+sections:
+  directions:
+    title: Directions
+  contactus:
+    title: Contact Us
 ---
 
-{%- capture joinus -%}
-{{ page.indentation.joinus }}<p class='cover-text'></p>
-{{ page.indentation.joinus }}<p class='cover-text-secondary'>
+{%- capture joinus_secondary -%}
 {{ page.indentation.joinus }}	Join us {{ site.data.index.meeting.day }}
 {{ page.indentation.joinus }}		at {{ site.data.index.meeting.time }}
-{{ page.indentation.joinus }}</p>
-{{ page.indentation.joinus }}<p class='cover-text-thirdiary'>
+{%- endcapture -%}
+
+{%- capture joinus_tertiary -%}
 {{ page.indentation.joinus }}	{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }},
 {{ page.indentation.joinus }}		{{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
-{{ page.indentation.joinus }}</p>
 {%- endcapture -%}
 
-{%- capture directions -%}
-{{ page.indentation.directions }}<div class='section-title'>Directions</div>
-{{ page.indentation.directions }}<div class='section-text-block'>
-{{ page.indentation.directions }}	<p>
+
+{%- capture directions_block -%}
 {{ page.indentation.directions }}		We currently meet at the Union Baptist Association office buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
 {{ page.indentation.directions }}		It's just to the south of Norman North High School and just north of E Robinson St.
-{{ page.indentation.directions }}	</p>
-{{ page.indentation.directions }}</div>
 {%- endcapture -%}
 
-{%- capture contactus -%}
-{{ page.indentation.contactus }}<div class='section-title'>Contact Us</div>
-{{ page.indentation.contactus }}<div class='section-text-block'>
-{{ page.indentation.contactus }}	<p>
+
+{%- capture contactus_block -%}
 {{ page.indentation.contactus }}		If you would like to know more about {{ site.data.index.church.name.full }}, or want to contact us for any other reason,
 {{ page.indentation.contactus }}			email {{ site.data.index.pastor.name }} at {{ site.data.index.pastor.e_mail }}.
-{{ page.indentation.contactus }}	</p>
-{{ page.indentation.contactus }}</div>
 {%- endcapture -%}
+
 
 {{ page.indentation.page }}<div class="container-fluid" id="home">
 {{ page.indentation.page }}	<div class="row">
 {{ page.indentation.page }}		<div class="bg-1">
 {{ page.indentation.page }}			<div class='cover-text-bg'>
-{{ joinus }}{% comment %}
+{{ page.indentation.page }}				<p class='cover-text'></p>
+{{ page.indentation.page }}				<p class='cover-text-secondary'>
+{{ joinus_secondary }}
+{{ page.indentation.page }}				</p>
+{{ page.indentation.page }}				<p class='cover-text-thirdiary'>
+{{ joinus_tertiary }}
+{{ page.indentation.page }}				</p>{% comment %}
 {{ page.indentation.page }}				<!--<a class="btn btn-secondary text-black" href="{{ "/visit" | relative_url}}">More Info</a>-->
 {{ page.indentation.page }}				{% endcomment %}
 {{ page.indentation.page }}			</div>
@@ -52,14 +54,24 @@ indentation:
 {{ page.indentation.page }}	<div class='row'>
 {{ page.indentation.page }}		<div class='col-md-3'></div>
 {{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
-{{ directions }}{% comment %}
+{{ page.indentation.page }}			<div class='section-title'>{{ page.sections.directions.title }}</div>
+{{ page.indentation.page }}			<div class='section-text-block'>
+{{ page.indentation.page }}				<p>
+{{ directions_block }}
+{{ page.indentation.page }}				</p>
+{{ page.indentation.page }}			</div>{% comment %}
 {{ page.indentation.page }}		<!--	<div class='section-title'>What To Expect</div>
 {{ page.indentation.page }}			<div class='section-text-block'>
 {{ page.indentation.page }}				<p>We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.</p>
 
 {{ page.indentation.page }}				<p>Our community includes people who have been following Jesus for many years, some who are new to Christian faith, and some who are exploring Christianity for the first time. Regardless of your background, beliefs, or life situation, we would love to have you join us this Sunday.</p>-->
 {{ page.indentation.page }}			{% endcomment %}
-{{ contactus }}{% comment %}
+{{ page.indentation.page }}			<div class='section-title'>{{ page.sections.contactus.title }}</div>
+{{ page.indentation.page }}			<div class='section-text-block'>
+{{ page.indentation.page }}				<p>
+{{ contactus_block }}
+{{ page.indentation.page }}				</p>
+{{ page.indentation.page }}			</div>{% comment %}
 {{ page.indentation.page }}<!--			<div class='section-title'>Commonly Asked Questions</div>
 {{ page.indentation.page }}			<div class='section-text-block'>
 {{ page.indentation.page }}				<p>Throw some Q&A in here.</p>
