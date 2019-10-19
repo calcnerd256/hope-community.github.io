@@ -2,9 +2,9 @@
 layout: index
 indentation:
   page: "		"
-  joinus: "						"
-  directions: "					"
-  contactus: "					"
+  joinus: "							"
+  directions: "							"
+  contactus: "							"
 sections:
   directions:
     title: Directions
@@ -13,25 +13,25 @@ sections:
 ---
 
 {%- capture joinus_secondary -%}
-{{ page.indentation.joinus }}	Join us {{ site.data.index.meeting.day }}
-{{ page.indentation.joinus }}		at {{ site.data.index.meeting.time }}
+{{ page.indentation.joinus }}Join us {{ site.data.index.meeting.day }}
+{{ page.indentation.joinus }}	at {{ site.data.index.meeting.time }}
 {%- endcapture -%}
 
 {%- capture joinus_tertiary -%}
-{{ page.indentation.joinus }}	{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }},
-{{ page.indentation.joinus }}		{{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
+{{ page.indentation.joinus }}{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }},
+{{ page.indentation.joinus }}	{{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
 {%- endcapture -%}
 
 
 {%- capture directions_block -%}
-{{ page.indentation.directions }}		We currently meet at the Union Baptist Association office buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
-{{ page.indentation.directions }}		It's just to the south of Norman North High School and just north of E Robinson St.
+{{ page.indentation.directions }}We currently meet at the Union Baptist Association office buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
+{{ page.indentation.directions }}It's just to the south of Norman North High School and just north of E Robinson St.
 {%- endcapture -%}
 
 
 {%- capture contactus_block -%}
-{{ page.indentation.contactus }}		If you would like to know more about {{ site.data.index.church.name.full }}, or want to contact us for any other reason,
-{{ page.indentation.contactus }}			email {{ site.data.index.pastor.name }} at {{ site.data.index.pastor.e_mail }}.
+{{ page.indentation.contactus }}If you would like to know more about {{ site.data.index.church.name.full }}, or want to contact us for any other reason,
+{{ page.indentation.contactus }}	email {{ site.data.index.pastor.name }} at {{ site.data.index.pastor.e_mail }}.
 {%- endcapture -%}
 
 
