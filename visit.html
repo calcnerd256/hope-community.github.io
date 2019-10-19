@@ -4,57 +4,61 @@ title: VISIT
 permalink: /secretvisitpage/
 indentation:
   page: "		"
-  joinus: "						"
-  expect: "					"
-  directions: "					"
-  faq: "					"
+joinus:
+  indentation: "						"
+expect:
+  indentation: "					"
+directions:
+  indentation: "					"
+faq:
+  indentation: "					"
 ---
 
 
 {%- capture joinus -%}
-{{ page.indentation.joinus }}<div class='cover-text'></div>
-{{ page.indentation.joinus }}<p class='cover-text-secondary'>
-{{ page.indentation.joinus }}	Join us {{ site.data.index.meeting.day }} at {{ site.data.index.meeting.time }}
-{{ page.indentation.joinus }}</p>
-{{ page.indentation.joinus }}<p class='cover-text-thirdiary'>
-{{ page.indentation.joinus }}	{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
-{{ page.indentation.joinus }}</p>
+{{ page.joinus.indentation }}<div class='cover-text'></div>
+{{ page.joinus.indentation }}<p class='cover-text-secondary'>
+{{ page.joinus.indentation }}	Join us {{ site.data.index.meeting.day }} at {{ site.data.index.meeting.time }}
+{{ page.joinus.indentation }}</p>
+{{ page.joinus.indentation }}<p class='cover-text-thirdiary'>
+{{ page.joinus.indentation }}	{{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}, {{ site.data.index.meeting.address.state.abbreviation }}
+{{ page.joinus.indentation }}</p>
 {%- endcapture -%}
 
 
 {%- capture expect -%}
-{{ page.indentation.expect }}<div class='section-title'>What To Expect</div>
-{{ page.indentation.expect }}<div class='section-text-block'>
-{{ page.indentation.expect }}	<p>
-{{ page.indentation.expect }}		We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.
-{{ page.indentation.expect }}	</p>
+{{ page.expect.indentation }}<div class='section-title'>What To Expect</div>
+{{ page.expect.indentation }}<div class='section-text-block'>
+{{ page.expect.indentation }}	<p>
+{{ page.expect.indentation }}		We are a community of people from various backgrounds growing in our commitment to follow Jesus Christ and to actively love our neighbors.
+{{ page.expect.indentation }}	</p>
 
-{{ page.indentation.expect }}	<p>
-{{ page.indentation.expect }}		Our community includes
-{{ page.indentation.expect }}			people who have been following Jesus for many years,
-{{ page.indentation.expect }}			some who are new to Christian faith,
-{{ page.indentation.expect }}			and some who are exploring Christianity for the first time.
-{{ page.indentation.expect }}	</p>
-{{ page.indentation.expect }}</div>
+{{ page.expect.indentation }}	<p>
+{{ page.expect.indentation }}		Our community includes
+{{ page.expect.indentation }}			people who have been following Jesus for many years,
+{{ page.expect.indentation }}			some who are new to Christian faith,
+{{ page.expect.indentation }}			and some who are exploring Christianity for the first time.
+{{ page.expect.indentation }}	</p>
+{{ page.expect.indentation }}</div>
 {%- endcapture -%}
 
 
 {%- capture directions -%}
-{{ page.indentation.directions }}<div class='section-title'>Directions</div>
-{{ page.indentation.directions }}<div class='section-text-block'>
-{{ page.indentation.directions }}	<p>
-{{ page.indentation.directions }}		We currently meet at the Union Baptist Association buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
-{{ page.indentation.directions }}		It's right next to Norman North High School, just north of E Robinson St.
-{{ page.indentation.directions }}	</p>
-{{ page.indentation.directions }}</div>
+{{ page.directions.indentation }}<div class='section-title'>Directions</div>
+{{ page.directions.indentation }}<div class='section-text-block'>
+{{ page.directions.indentation }}	<p>
+{{ page.directions.indentation }}		We currently meet at the Union Baptist Association buidling at {{ site.data.index.meeting.address.number }} {{ site.data.index.meeting.address.street }}, {{ site.data.index.meeting.address.city }}.
+{{ page.directions.indentation }}		It's right next to Norman North High School, just north of E Robinson St.
+{{ page.directions.indentation }}	</p>
+{{ page.directions.indentation }}</div>
 {%- endcapture -%}
 
 
 {%- capture faq -%}
-{{ page.indentation.faq }}<div class='section-title'>Commonly Asked Questions</div>
-{{ page.indentation.faq }}<div class='section-text-block'>
-{{ page.indentation.faq }}	<p>Throw some Q&A in here.</p>
-{{ page.indentation.faq }}</div>
+{{ page.faq.indentation }}<div class='section-title'>Commonly Asked Questions</div>
+{{ page.faq.indentation }}<div class='section-text-block'>
+{{ page.faq.indentation }}	<p>Throw some Q&A in here.</p>
+{{ page.faq.indentation }}</div>
 {%- endcapture -%}
 
 
