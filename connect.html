@@ -10,13 +10,11 @@ growthgroups:
 ---
 
 {%- capture growthgroups -%}
-{{ page.growthgroups.indentation }}<div class='section-title'>{{ page.growthgroups.title }}</div>
-{{ page.growthgroups.indentation }}<div class='section-text-block'>{% for paragraph in site.data.connect.growth_groups.paragraphs %}
+{% for paragraph in site.data.connect.growth_groups.paragraphs %}
 {{ page.growthgroups.indentation }}	<p>{% for sentence in paragraph %}
 {{ page.growthgroups.indentation }}		{{ sentence }}{% endfor %}
 {{ page.growthgroups.indentation }}	</p>
 {% endfor %}
-{{ page.growthgroups.indentation }}</div>
 {%- endcapture -%}
 
 {{ page.indentation.page }}<div class="container-fluid" id="home">
@@ -30,7 +28,9 @@ growthgroups:
 {{ page.indentation.page }}	<div class='row'>
 {{ page.indentation.page }}		<div class='col-md-3'></div>
 {{ page.indentation.page }}		<div class='col-md-9 big-info-block'>
-{{ growthgroups }}{% comment %}
+{{ page.growthgroups.indentation }}<div class='section-title'>{{ page.growthgroups.title }}</div>
+{{ page.growthgroups.indentation }}<div class='section-text-block'>{{ growthgroups }}
+{{ page.growthgroups.indentation }}</div>{% comment %}
 
 {{ page.indentation.page }}				<!--<div class='section-title'>Locations</div>
 {{ page.indentation.page }}			<div class='section-text-block'>List of growth group locations here and times they meet</div>-->{% endcomment %}
