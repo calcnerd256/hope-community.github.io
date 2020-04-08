@@ -1,7 +1,7 @@
 title: Hope Community Church
 author: hope-community
 email: hopechurchnorman@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   A website for Hope Community Church in Norman, OK
 github_username:  hopechurchnorman
 plugins:
